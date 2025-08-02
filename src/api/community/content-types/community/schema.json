@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "communities",
+  "info": {
+    "singularName": "community",
+    "pluralName": "communities",
+    "displayName": "Community",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "media_details": {
+      "type": "json"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "visibility": {
+      "type": "boolean",
+      "default": true
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "community_boards"
+    }
+  }
+}

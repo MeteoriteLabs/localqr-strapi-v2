@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommendation_lists",
+  "info": {
+    "singularName": "recommendation-list",
+    "pluralName": "recommendation-lists",
+    "displayName": "Recommendation_List",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "List_Name": {
+      "type": "string"
+    },
+    "Instagram_Media_URL": {
+      "type": "string"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "recommendation_lists"
+    },
+    "Visibility": {
+      "type": "boolean"
+    },
+    "List_Name_Details": {
+      "type": "json"
+    },
+    "Sequence": {
+      "type": "integer"
+    },
+    "recommended_places": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommended-place.recommended-place",
+      "mappedBy": "recommendation_list"
+    }
+  }
+}

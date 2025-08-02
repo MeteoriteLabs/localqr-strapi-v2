@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommendation_sub_categories",
+  "info": {
+    "singularName": "recommendation-sub-category",
+    "pluralName": "recommendation-sub-categories",
+    "displayName": "Recommendation_Sub_Category"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sub_category": {
+      "type": "string"
+    },
+    "recommendation_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recommendation-category.recommendation-category",
+      "inversedBy": "recommendation_sub_categories"
+    }
+  }
+}

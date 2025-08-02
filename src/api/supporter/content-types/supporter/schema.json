@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supporters",
+  "info": {
+    "singularName": "supporter",
+    "pluralName": "supporters",
+    "displayName": "Supporter"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "recommended_place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recommended-place.recommended-place",
+      "inversedBy": "supporter"
+    },
+    "accounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::account.account"
+    }
+  }
+}

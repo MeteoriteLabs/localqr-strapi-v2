@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platform_terms",
+  "info": {
+    "singularName": "platform-term",
+    "pluralName": "platform-terms",
+    "displayName": "Platform_Term"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Terms_and_Condition": {
+      "type": "blocks"
+    },
+    "Privacy_and_Policy": {
+      "type": "blocks"
+    },
+    "Cookie_Policy": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accounts",
+  "info": {
+    "singularName": "account",
+    "pluralName": "accounts",
+    "displayName": "Account",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "Account_Name": {
+      "type": "string"
+    },
+    "Bio_1": {
+      "type": "string"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "accounts"
+    },
+    "Addresss": {
+      "type": "json"
+    },
+    "Account_Type": {
+      "type": "enumeration",
+      "enum": [
+        "Individual",
+        "Creator",
+        "Brand"
+      ]
+    },
+    "profile_picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bg_picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "social_media": {
+      "type": "json"
+    },
+    "primary_admin": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "all_admins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user"
+    },
+    "mobile_number_visibility": {
+      "type": "boolean"
+    },
+    "profile_place_details": {
+      "type": "json"
+    },
+    "profile_place_media_details": {
+      "type": "json"
+    },
+    "recommendation_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommendation-list.recommendation-list",
+      "mappedBy": "account"
+    },
+    "mobile_number": {
+      "type": "string"
+    },
+    "Primary_Address": {
+      "type": "json",
+      "required": true
+    },
+    "Bio": {
+      "type": "richtext"
+    },
+    "community_boards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::community.community",
+      "mappedBy": "account"
+    },
+    "guides": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guide.guide",
+      "mappedBy": "account"
+    }
+  }
+}

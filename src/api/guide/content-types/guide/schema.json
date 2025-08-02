@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guides",
+  "info": {
+    "singularName": "guide",
+    "pluralName": "guides",
+    "displayName": "Guide",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Tips_Notes": {
+      "type": "blocks"
+    },
+    "Visibility": {
+      "type": "boolean"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "guides"
+    },
+    "Estimated_Budget": {
+      "type": "json"
+    },
+    "Guide_Section_Details": {
+      "type": "json"
+    },
+    "guide_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guide-section.guide-section",
+      "mappedBy": "guide"
+    },
+    "Guide_Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

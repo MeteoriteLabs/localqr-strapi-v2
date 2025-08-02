@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guide_sections",
+  "info": {
+    "singularName": "guide-section",
+    "pluralName": "guide-sections",
+    "displayName": "Guide_Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Sequence": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Recommendation_Activity": {
+      "type": "json"
+    },
+    "guide": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::guide.guide",
+      "inversedBy": "guide_sections"
+    },
+    "Recomendation_Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Map_Details": {
+      "type": "json"
+    },
+    "Packing_List": {
+      "type": "json"
+    },
+    "Pre_Tasks": {
+      "type": "json"
+    }
+  }
+}

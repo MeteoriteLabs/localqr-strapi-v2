@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "followers",
+  "info": {
+    "singularName": "follower",
+    "pluralName": "followers",
+    "displayName": "Follower"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "main_account": {
+      "type": "string"
+    },
+    "follower_account": {
+      "type": "string"
+    }
+  }
+}

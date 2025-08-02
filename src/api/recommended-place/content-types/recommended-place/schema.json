@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_places",
+  "info": {
+    "singularName": "recommended-place",
+    "pluralName": "recommended-places",
+    "displayName": "Recommended_place",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Place_Details": {
+      "type": "json"
+    },
+    "Contact_Name": {
+      "type": "string"
+    },
+    "Contact_Number": {
+      "type": "string"
+    },
+    "recommendation_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recommendation-category.recommendation-category"
+    },
+    "Places_Social_Link": {
+      "type": "string"
+    },
+    "Places_Website": {
+      "type": "string"
+    },
+    "Users_Place_Note": {
+      "type": "blocks"
+    },
+    "Users_Social_URL": {
+      "type": "string"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media_details": {
+      "type": "json"
+    },
+    "supporters": {
+      "type": "json"
+    },
+    "Source_Of_Recommendation": {
+      "type": "enumeration",
+      "enum": [
+        "self",
+        "suggestion"
+      ]
+    },
+    "recommendation_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recommendation-list.recommendation-list",
+      "inversedBy": "recommended_places"
+    },
+    "recommendation_sub_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::recommendation-sub-category.recommendation-sub-category"
+    },
+    "supporter": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::supporter.supporter",
+      "mappedBy": "recommended_place"
+    },
+    "user_recommendation_note": {
+      "type": "richtext"
+    }
+  }
+}

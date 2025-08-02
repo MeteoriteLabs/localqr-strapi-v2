@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unsubscribes",
+  "info": {
+    "singularName": "unsubscribe",
+    "pluralName": "unsubscribes",
+    "displayName": "Unsubscribe"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "feedback": {
+      "type": "string"
+    },
+    "unsubscribedAt": {
+      "type": "datetime"
+    }
+  }
+}

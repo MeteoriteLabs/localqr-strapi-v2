@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reason_for_leavings",
+  "info": {
+    "singularName": "reason-for-leaving",
+    "pluralName": "reason-for-leavings",
+    "displayName": "Reason_For_Leaving"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Reasons": {
+      "type": "json"
+    },
+    "User_Details": {
+      "type": "json"
+    }
+  }
+}
