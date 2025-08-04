@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-02T10:34:44.710Z"
+    "x-generation-date": "2025-08-03T04:59:54.798Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10647,7 +10647,8 @@
                                     "type": "string"
                                   },
                                   "Sequence": {
-                                    "type": "integer"
+                                    "type": "number",
+                                    "format": "float"
                                   },
                                   "Description": {},
                                   "Recommendation_Activity": {},
@@ -10797,6 +10798,7 @@
                                   "Map_Details": {},
                                   "Packing_List": {},
                                   "Pre_Tasks": {},
+                                  "Section_tags": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -10986,6 +10988,17 @@
                             "slug": {
                               "type": "string"
                             },
+                            "Guide_Type": {
+                              "type": "string",
+                              "enum": [
+                                "Itinerary",
+                                "Theme",
+                                "Mixed",
+                                "Tips"
+                              ]
+                            },
+                            "Analytics": {},
+                            "Guide_Tags": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -13712,7 +13725,8 @@
                             "type": "string"
                           },
                           "Sequence": {
-                            "type": "integer"
+                            "type": "number",
+                            "format": "float"
                           },
                           "Description": {},
                           "Recommendation_Activity": {},
@@ -13862,6 +13876,7 @@
                           "Map_Details": {},
                           "Packing_List": {},
                           "Pre_Tasks": {},
+                          "Section_tags": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -14051,6 +14066,17 @@
                     "slug": {
                       "type": "string"
                     },
+                    "Guide_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Itinerary",
+                        "Theme",
+                        "Mixed",
+                        "Tips"
+                      ]
+                    },
+                    "Analytics": {},
+                    "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -15210,6 +15236,17 @@
               "slug": {
                 "type": "string"
               },
+              "Guide_Type": {
+                "type": "string",
+                "enum": [
+                  "Itinerary",
+                  "Theme",
+                  "Mixed",
+                  "Tips"
+                ]
+              },
+              "Analytics": {},
+              "Guide_Tags": {},
               "locale": {
                 "type": "string"
               },
@@ -17185,7 +17222,8 @@
                             "type": "string"
                           },
                           "Sequence": {
-                            "type": "integer"
+                            "type": "number",
+                            "format": "float"
                           },
                           "Description": {},
                           "Recommendation_Activity": {},
@@ -17335,6 +17373,7 @@
                           "Map_Details": {},
                           "Packing_List": {},
                           "Pre_Tasks": {},
+                          "Section_tags": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -17524,6 +17563,17 @@
                     "slug": {
                       "type": "string"
                     },
+                    "Guide_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Itinerary",
+                        "Theme",
+                        "Mixed",
+                        "Tips"
+                      ]
+                    },
+                    "Analytics": {},
+                    "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -17782,6 +17832,17 @@
           "slug": {
             "type": "string"
           },
+          "Guide_Type": {
+            "type": "string",
+            "enum": [
+              "Itinerary",
+              "Theme",
+              "Mixed",
+              "Tips"
+            ]
+          },
+          "Analytics": {},
+          "Guide_Tags": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -17859,7 +17920,8 @@
                 "type": "string"
               },
               "Sequence": {
-                "type": "integer"
+                "type": "number",
+                "format": "float"
               },
               "Description": {},
               "Recommendation_Activity": {},
@@ -17891,6 +17953,7 @@
               "Map_Details": {},
               "Packing_List": {},
               "Pre_Tasks": {},
+              "Section_tags": {},
               "locale": {
                 "type": "string"
               },
@@ -17960,7 +18023,8 @@
             "type": "string"
           },
           "Sequence": {
-            "type": "integer"
+            "type": "number",
+            "format": "float"
           },
           "Description": {},
           "Recommendation_Activity": {},
@@ -19920,7 +19984,8 @@
                       "type": "string"
                     },
                     "Sequence": {
-                      "type": "integer"
+                      "type": "number",
+                      "format": "float"
                     },
                     "Description": {},
                     "Recommendation_Activity": {},
@@ -20070,6 +20135,7 @@
                     "Map_Details": {},
                     "Packing_List": {},
                     "Pre_Tasks": {},
+                    "Section_tags": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -20259,6 +20325,17 @@
               "slug": {
                 "type": "string"
               },
+              "Guide_Type": {
+                "type": "string",
+                "enum": [
+                  "Itinerary",
+                  "Theme",
+                  "Mixed",
+                  "Tips"
+                ]
+              },
+              "Analytics": {},
+              "Guide_Tags": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -20447,6 +20524,7 @@
           "Map_Details": {},
           "Packing_List": {},
           "Pre_Tasks": {},
+          "Section_tags": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -23991,7 +24069,8 @@
                             "type": "string"
                           },
                           "Sequence": {
-                            "type": "integer"
+                            "type": "number",
+                            "format": "float"
                           },
                           "Description": {},
                           "Recommendation_Activity": {},
@@ -24141,6 +24220,7 @@
                           "Map_Details": {},
                           "Packing_List": {},
                           "Pre_Tasks": {},
+                          "Section_tags": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -24330,6 +24410,17 @@
                     "slug": {
                       "type": "string"
                     },
+                    "Guide_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Itinerary",
+                        "Theme",
+                        "Mixed",
+                        "Tips"
+                      ]
+                    },
+                    "Analytics": {},
+                    "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -26899,7 +26990,8 @@
                                 "type": "string"
                               },
                               "Sequence": {
-                                "type": "integer"
+                                "type": "number",
+                                "format": "float"
                               },
                               "Description": {},
                               "Recommendation_Activity": {},
@@ -27049,6 +27141,7 @@
                               "Map_Details": {},
                               "Packing_List": {},
                               "Pre_Tasks": {},
+                              "Section_tags": {},
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -27238,6 +27331,17 @@
                         "slug": {
                           "type": "string"
                         },
+                        "Guide_Type": {
+                          "type": "string",
+                          "enum": [
+                            "Itinerary",
+                            "Theme",
+                            "Mixed",
+                            "Tips"
+                          ]
+                        },
+                        "Analytics": {},
+                        "Guide_Tags": {},
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -29613,7 +29717,8 @@
                                     "type": "string"
                                   },
                                   "Sequence": {
-                                    "type": "integer"
+                                    "type": "number",
+                                    "format": "float"
                                   },
                                   "Description": {},
                                   "Recommendation_Activity": {},
@@ -29763,6 +29868,7 @@
                                   "Map_Details": {},
                                   "Packing_List": {},
                                   "Pre_Tasks": {},
+                                  "Section_tags": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -29952,6 +30058,17 @@
                             "slug": {
                               "type": "string"
                             },
+                            "Guide_Type": {
+                              "type": "string",
+                              "enum": [
+                                "Itinerary",
+                                "Theme",
+                                "Mixed",
+                                "Tips"
+                              ]
+                            },
+                            "Analytics": {},
+                            "Guide_Tags": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"

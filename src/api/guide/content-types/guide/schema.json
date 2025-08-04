@@ -54,6 +54,21 @@
     },
     "slug": {
       "type": "string"
+    },
+    "Guide_Type": {
+      "type": "enumeration",
+      "enum": [
+        "Itinerary",
+        "Theme",
+        "Mixed",
+        "Tips"
+      ]
+    },
+    "Analytics": {
+      "type": "json"
+    },
+    "Guide_Tags": {
+      "type": "json"
     }
   }
 }

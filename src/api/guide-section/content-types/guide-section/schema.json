@@ -15,7 +15,7 @@
       "type": "string"
     },
     "Sequence": {
-      "type": "integer"
+      "type": "decimal"
     },
     "Description": {
       "type": "blocks"
@@ -47,6 +47,9 @@
       "type": "json"
     },
     "Pre_Tasks": {
+      "type": "json"
+    },
+    "Section_tags": {
       "type": "json"
     }
   }

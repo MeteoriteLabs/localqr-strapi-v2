@@ -560,7 +560,8 @@ export interface ApiGuideSectionGuideSection
       true
     >;
     Recommendation_Activity: Schema.Attribute.JSON;
-    Sequence: Schema.Attribute.Integer;
+    Section_tags: Schema.Attribute.JSON;
+    Sequence: Schema.Attribute.Decimal;
     Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -581,6 +582,7 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
+    Analytics: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -594,6 +596,10 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     guide_sections: Schema.Attribute.Relation<
       'oneToMany',
       'api::guide-section.guide-section'
+    >;
+    Guide_Tags: Schema.Attribute.JSON;
+    Guide_Type: Schema.Attribute.Enumeration<
+      ['Itinerary', 'Theme', 'Mixed', 'Tips']
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'> &
