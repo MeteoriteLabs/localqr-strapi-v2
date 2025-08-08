@@ -1,0 +1,81 @@
+name: Build & Deploy LocalQR
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Generate .env from secrets
+      shell: bash
+      run: |
+        cat > .env <<'EOF'
+        HOST=0.0.0.0
+        PORT=1337
+        APP_KEYS=${{ secrets.APP_KEYS }}
+        API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}
+        ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}
+        TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}
+        DATABASE_CLIENT=postgres
+        DATABASE_HOST=${{ secrets.DATABASE_HOST }}
+        DATABASE_PORT=${{ secrets.DATABASE_PORT }}
+        DATABASE_NAME=${{ secrets.DATABASE_NAME }}
+        DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}
+        DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}
+        DATABASE_SSL=${{ secrets.DATABASE_SSL }}
+        DATABASE_FILENAME=
+        AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_ACCESS_SECRET=${{ secrets.AWS_ACCESS_SECRET }}
+        AWS_REGION=${{ secrets.AWS_REGION }}
+        AWS_BUCKET=${{ secrets.AWS_BUCKET }}
+        AWS_SES_KEY=${{ secrets.AWS_SES_KEY }}
+        AWS_SES_SECRET=${{ secrets.AWS_SES_SECRET }}
+        JWT_SECRET=${{ secrets.JWT_SECRET }}
+        EOF
+
+    - name: Build image
+      run: |
+        docker build -t localqr-strapi:${{ github.sha }} .
+
+    - name: Save image to tar
+      run: docker save localqr-strapi:${{ github.sha }} -o localqr-strapi.tar
+
+    - name: Copy artifacts to EC2
+      uses: appleboy/scp-action@v1
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        port: ${{ secrets.EC2_PORT }}
+        source: "localqr-strapi.tar,.env"
+        target: /home/ubuntu
+
+    - name: Deploy on EC2
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        port: ${{ secrets.EC2_PORT }}
+        script: |
+          set -e
+          cd /home/ubuntu
+          echo "Loading docker image"
+          docker load -i localqr-strapi.tar
+
+          echo "Stopping old container (if running)"
+          docker stop localqr-strapi || true
+          docker rm   localqr-strapi || true
+
+          echo "Starting new container"
+          docker run -d --name localqr-strapi \
+            --restart always \
+            --env-file .env \
+            -p 80:1337 \
+            localqr-strapi:${{ github.sha }}
+
+          echo "Deployed localqr-strapi:${{ github.sha }}"
