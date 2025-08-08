@@ -1,0 +1,14 @@
+.git
+.github
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+*.log
+*.md
+*.sql
+*.zip
+backup/
+exports/
+build/
+.env
