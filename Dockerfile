@@ -11,7 +11,7 @@ ENV NODE_ENV=production
 RUN npm run build
 
 
-FROM node:20-alpine
+FROM node:22.18.0-slim
 WORKDIR /app
 COPY --from=build /app ./
 COPY --from=build /app/.env .env
