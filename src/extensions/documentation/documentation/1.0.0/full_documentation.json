@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-08T19:17:57.066Z"
+    "x-generation-date": "2025-08-15T17:30:24.925Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8613,9 +8613,9 @@
               "Account_Type": {
                 "type": "string",
                 "enum": [
-                  "Individual",
+                  "Personal",
                   "Creator",
-                  "Brand"
+                  "Business"
                 ]
               },
               "profile_picture": {
@@ -9293,9 +9293,9 @@
                       "Account_Type": {
                         "type": "string",
                         "enum": [
-                          "Individual",
+                          "Personal",
                           "Creator",
-                          "Brand"
+                          "Business"
                         ]
                       },
                       "profile_picture": {
@@ -11165,9 +11165,9 @@
           "Account_Type": {
             "type": "string",
             "enum": [
-              "Individual",
+              "Personal",
               "Creator",
-              "Brand"
+              "Business"
             ]
           },
           "profile_picture": {
@@ -12588,9 +12588,9 @@
               "Account_Type": {
                 "type": "string",
                 "enum": [
-                  "Individual",
+                  "Personal",
                   "Creator",
-                  "Brand"
+                  "Business"
                 ]
               },
               "profile_picture": {
@@ -15868,9 +15868,9 @@
               "Account_Type": {
                 "type": "string",
                 "enum": [
-                  "Individual",
+                  "Personal",
                   "Creator",
-                  "Brand"
+                  "Business"
                 ]
               },
               "profile_picture": {
@@ -18593,9 +18593,9 @@
                   "Account_Type": {
                     "type": "string",
                     "enum": [
-                      "Individual",
+                      "Personal",
                       "Creator",
-                      "Brand"
+                      "Business"
                     ]
                   },
                   "profile_picture": {
@@ -22715,9 +22715,9 @@
               "Account_Type": {
                 "type": "string",
                 "enum": [
-                  "Individual",
+                  "Personal",
                   "Creator",
-                  "Brand"
+                  "Business"
                 ]
               },
               "profile_picture": {
@@ -26410,9 +26410,9 @@
                   "Account_Type": {
                     "type": "string",
                     "enum": [
-                      "Individual",
+                      "Personal",
                       "Creator",
-                      "Brand"
+                      "Business"
                     ]
                   },
                   "profile_picture": {
@@ -29137,9 +29137,9 @@
                       "Account_Type": {
                         "type": "string",
                         "enum": [
-                          "Individual",
+                          "Personal",
                           "Creator",
-                          "Brand"
+                          "Business"
                         ]
                       },
                       "profile_picture": {

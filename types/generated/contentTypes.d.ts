@@ -383,7 +383,7 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
   attributes: {
     Account_Name: Schema.Attribute.String;
     Account_Type: Schema.Attribute.Enumeration<
-      ['Individual', 'Creator', 'Brand']
+      ['Personal', 'Creator', 'Business']
     >;
     Addresss: Schema.Attribute.JSON;
     all_admins: Schema.Attribute.Relation<

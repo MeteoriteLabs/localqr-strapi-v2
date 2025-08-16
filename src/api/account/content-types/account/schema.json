@@ -32,9 +32,9 @@
     "Account_Type": {
       "type": "enumeration",
       "enum": [
-        "Individual",
+        "Personal",
         "Creator",
-        "Brand"
+        "Business"
       ]
     },
     "profile_picture": {
