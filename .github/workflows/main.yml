@@ -75,7 +75,7 @@ jobs:
           sudo docker run -d --name localqr-strapi \
             --restart always \
             --env-file .env \
-            -p 80:1337 \
+            -p 1337:1337 \
             localqr-strapi:${{ github.sha }}
 
           echo "Deployed localqr-strapi:${{ github.sha }}"
