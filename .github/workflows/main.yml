@@ -92,3 +92,6 @@ jobs:
             localqr-strapi:${{ github.sha }}
 
           echo "Deployed localqr-strapi:${{ github.sha }}"
+
+          rm localqr-strapi.tar
+          echo "Deleted docker tar file"
