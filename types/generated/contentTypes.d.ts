@@ -417,6 +417,7 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
     profile_picture: Schema.Attribute.Media<'images'>;
     profile_place_details: Schema.Attribute.JSON;
     profile_place_media_details: Schema.Attribute.JSON;
+    Public_Profile_Address: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     recommendation_lists: Schema.Attribute.Relation<
       'oneToMany',

@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-15T17:30:24.925Z"
+    "x-generation-date": "2025-08-29T02:23:15.777Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8720,6 +8720,7 @@
                   "example": "string or id"
                 }
               },
+              "Public_Profile_Address": {},
               "locale": {
                 "type": "string"
               },
@@ -11053,6 +11054,7 @@
                           }
                         }
                       },
+                      "Public_Profile_Address": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -11508,6 +11510,7 @@
               }
             }
           },
+          "Public_Profile_Address": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -14131,6 +14134,7 @@
                   }
                 }
               },
+              "Public_Profile_Address": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -17628,6 +17632,7 @@
                   }
                 }
               },
+              "Public_Profile_Address": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -19914,6 +19919,7 @@
                       }
                     }
                   },
+                  "Public_Profile_Address": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -24475,6 +24481,7 @@
                   }
                 }
               },
+              "Public_Profile_Address": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -27396,6 +27403,7 @@
                       }
                     }
                   },
+                  "Public_Profile_Address": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -30123,6 +30131,7 @@
                           }
                         }
                       },
+                      "Public_Profile_Address": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"

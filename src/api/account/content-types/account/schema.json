@@ -102,6 +102,9 @@
       "relation": "oneToMany",
       "target": "api::guide.guide",
       "mappedBy": "account"
+    },
+    "Public_Profile_Address": {
+      "type": "json"
     }
   }
 }
