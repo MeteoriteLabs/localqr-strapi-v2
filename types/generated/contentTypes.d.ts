@@ -380,19 +380,54 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    Account_Name: Schema.Attribute.String;
+    Account_Name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     Account_Type: Schema.Attribute.Enumeration<
       ['Personal', 'Creator', 'Business']
-    >;
-    Addresss: Schema.Attribute.JSON;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Addresss: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     all_admins: Schema.Attribute.Relation<
       'oneToMany',
       'plugin::users-permissions.user'
     >;
-    bg_picture: Schema.Attribute.Media<'images'>;
-    Bio: Schema.Attribute.RichText;
-    Bio_1: Schema.Attribute.String;
+    bg_picture: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Bio: Schema.Attribute.RichText &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Bio_1: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     community_boards: Schema.Attribute.Relation<
       'oneToMany',
       'api::community.community'
@@ -400,34 +435,80 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Feed_Data: Schema.Attribute.JSON;
     guides: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::account.account'
-    > &
-      Schema.Attribute.Private;
-    mobile_number: Schema.Attribute.String;
-    mobile_number_visibility: Schema.Attribute.Boolean;
-    Primary_Address: Schema.Attribute.JSON & Schema.Attribute.Required;
+    >;
+    mobile_number: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mobile_number_visibility: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Primary_Address: Schema.Attribute.JSON &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     primary_admin: Schema.Attribute.Relation<
       'oneToOne',
       'plugin::users-permissions.user'
     >;
-    profile_picture: Schema.Attribute.Media<'images'>;
-    profile_place_details: Schema.Attribute.JSON;
-    profile_place_media_details: Schema.Attribute.JSON;
-    Public_Profile_Address: Schema.Attribute.JSON;
+    profile_picture: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    profile_place_details: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    profile_place_media_details: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    Public_Profile_Address: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     recommendation_lists: Schema.Attribute.Relation<
       'oneToMany',
       'api::recommendation-list.recommendation-list'
     >;
-    social_media: Schema.Attribute.JSON;
+    social_media: Schema.Attribute.JSON &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    username: Schema.Attribute.String;
+    username: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     users_permissions_users: Schema.Attribute.Relation<
       'manyToMany',
       'plugin::users-permissions.user'

@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-29T02:23:15.777Z"
+    "x-generation-date": "2025-09-05T20:12:23.063Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8721,6 +8721,7 @@
                 }
               },
               "Public_Profile_Address": {},
+              "Feed_Data": {},
               "locale": {
                 "type": "string"
               },
@@ -11055,6 +11056,7 @@
                         }
                       },
                       "Public_Profile_Address": {},
+                      "Feed_Data": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -11511,6 +11513,7 @@
             }
           },
           "Public_Profile_Address": {},
+          "Feed_Data": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -14135,6 +14138,7 @@
                 }
               },
               "Public_Profile_Address": {},
+              "Feed_Data": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -17633,6 +17637,7 @@
                 }
               },
               "Public_Profile_Address": {},
+              "Feed_Data": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -19920,6 +19925,7 @@
                     }
                   },
                   "Public_Profile_Address": {},
+                  "Feed_Data": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -24482,6 +24488,7 @@
                 }
               },
               "Public_Profile_Address": {},
+              "Feed_Data": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -27404,6 +27411,7 @@
                     }
                   },
                   "Public_Profile_Address": {},
+                  "Feed_Data": {},
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -30132,6 +30140,7 @@
                         }
                       },
                       "Public_Profile_Address": {},
+                      "Feed_Data": {},
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
