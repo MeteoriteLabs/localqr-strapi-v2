@@ -76,6 +76,7 @@ jobs:
         port: ${{ secrets.EC2_PORT }}
         script: |
           set -e
+          sudo docker system prune -a
           cd /home/ubuntu
           echo "Loading docker image"
           sudo docker load -i localqr-strapi.tar
