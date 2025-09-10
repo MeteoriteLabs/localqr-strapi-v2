@@ -79,6 +79,10 @@
       "relation": "manyToMany",
       "target": "api::account.account",
       "mappedBy": "users_permissions_users"
+    },
+    "Language_Choice": {
+      "type": "string",
+      "default": "en"
     }
   }
 }

@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-09-06T12:13:36.991Z"
+    "x-generation-date": "2025-09-09T06:17:19.445Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -11111,6 +11111,9 @@
                     }
                   }
                 },
+                "Language_Choice": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -12535,6 +12538,9 @@
                           }
                         }
                       }
+                    },
+                    "Language_Choice": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -15818,6 +15824,9 @@
                         }
                       }
                     },
+                    "Language_Choice": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -18544,6 +18553,9 @@
                               }
                             }
                           }
+                        },
+                        "Language_Choice": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -22669,6 +22681,9 @@
                         }
                       }
                     },
+                    "Language_Choice": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -26366,6 +26381,9 @@
                             }
                           }
                         },
+                        "Language_Choice": {
+                          "type": "string"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -29094,6 +29112,9 @@
                                   }
                                 }
                               }
+                            },
+                            "Language_Choice": {
+                              "type": "string"
                             },
                             "createdAt": {
                               "type": "string",
