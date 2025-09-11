@@ -721,6 +721,7 @@ export interface ApiPlatformTermPlatformTerm
   extends Struct.CollectionTypeSchema {
   collectionName: 'platform_terms';
   info: {
+    description: '';
     displayName: 'Platform_Term';
     pluralName: 'platform-terms';
     singularName: 'platform-term';
@@ -728,20 +729,39 @@ export interface ApiPlatformTermPlatformTerm
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    Cookie_Policy: Schema.Attribute.Blocks;
+    Cookie_Policy: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::platform-term.platform-term'
-    > &
-      Schema.Attribute.Private;
-    Privacy_and_Policy: Schema.Attribute.Blocks;
+    >;
+    Privacy_and_Policy: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    Terms_and_Condition: Schema.Attribute.Blocks;
+    Terms_and_Condition: Schema.Attribute.Blocks &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -782,6 +802,7 @@ export interface ApiRecommendationCategoryRecommendationCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'recommendation_categories';
   info: {
+    description: '';
     displayName: 'Recommendation_Category';
     pluralName: 'recommendation-categories';
     singularName: 'recommendation-category';
@@ -789,17 +810,26 @@ export interface ApiRecommendationCategoryRecommendationCategory
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    Category_Name: Schema.Attribute.String;
+    Category_Name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::recommendation-category.recommendation-category'
-    > &
-      Schema.Attribute.Private;
+    >;
     publishedAt: Schema.Attribute.DateTime;
     recommendation_sub_categories: Schema.Attribute.Relation<
       'oneToMany',

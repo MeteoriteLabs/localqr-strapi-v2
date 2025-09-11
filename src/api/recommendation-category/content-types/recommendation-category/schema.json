@@ -4,14 +4,25 @@
   "info": {
     "singularName": "recommendation-category",
     "pluralName": "recommendation-categories",
-    "displayName": "Recommendation_Category"
+    "displayName": "Recommendation_Category",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "Category_Name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "recommendation_sub_categories": {
       "type": "relation",
