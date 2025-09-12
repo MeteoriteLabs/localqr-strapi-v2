@@ -22,7 +22,7 @@ jobs:
       shell: bash
       run: |
         cat > .env <<'EOF'
-        HOST=0.0.0.0
+        HOST=api.localqr.earth
         PORT=1337
         APP_KEYS=${{ secrets.APP_KEYS }}
         API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}
