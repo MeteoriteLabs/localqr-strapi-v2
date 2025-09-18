@@ -768,6 +768,38 @@ export interface ApiPlatformTermPlatformTerm
   };
 }
 
+export interface ApiPublicPageAnalyticPublicPageAnalytic
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'public_page_analytics';
+  info: {
+    displayName: 'Public_Page_Analytic';
+    pluralName: 'public-page-analytics';
+    singularName: 'public-page-analytic';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Account_Id: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::public-page-analytic.public-page-analytic'
+    > &
+      Schema.Attribute.Private;
+    Location_Id: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Recommendation_Id: Schema.Attribute.String;
+    Stats: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiReasonForLeavingReasonForLeaving
   extends Struct.CollectionTypeSchema {
   collectionName: 'reason_for_leavings';
@@ -1560,6 +1592,7 @@ declare module '@strapi/strapi' {
       'api::guide-section.guide-section': ApiGuideSectionGuideSection;
       'api::guide.guide': ApiGuideGuide;
       'api::platform-term.platform-term': ApiPlatformTermPlatformTerm;
+      'api::public-page-analytic.public-page-analytic': ApiPublicPageAnalyticPublicPageAnalytic;
       'api::reason-for-leaving.reason-for-leaving': ApiReasonForLeavingReasonForLeaving;
       'api::recommendation-category.recommendation-category': ApiRecommendationCategoryRecommendationCategory;
       'api::recommendation-list.recommendation-list': ApiRecommendationListRecommendationList;

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "public_page_analytics",
+  "info": {
+    "singularName": "public-page-analytic",
+    "pluralName": "public-page-analytics",
+    "displayName": "Public_Page_Analytic"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Account_Id": {
+      "type": "string",
+      "required": true
+    },
+    "Location_Id": {
+      "type": "string",
+      "required": false
+    },
+    "Recommendation_Id": {
+      "type": "string"
+    },
+    "Stats": {
+      "type": "json"
+    }
+  }
+}
