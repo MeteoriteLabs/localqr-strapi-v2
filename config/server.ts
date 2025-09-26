@@ -1,6 +1,7 @@
 export default ({ env }) => ({
-  host: env('PUBLIC_URL', 'api.localqr.earth'),
-  // port: env.int('PORT', 1337),
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
+  url: env('PUBLIC_URL', 'https://api.localqr.earth'),
   app: {
     keys: env.array('APP_KEYS'),
   },
