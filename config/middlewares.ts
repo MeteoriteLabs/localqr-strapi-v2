@@ -30,7 +30,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['localhost:5173', 'https://localqr.earth', 'https://api.localqr.earth'],
+      origin: ['https://localqr.earth', 'localhost:5173', 'https://api.localqr.earth'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       keepHeaderOnError: true,
     },
