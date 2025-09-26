@@ -24,7 +24,8 @@ jobs:
         cat > .env <<'EOF'
         HOST=0.0.0.0
         PORT=1337
-        URL-api.localqr.earth
+        URL=api.localqr.earth
+        PUBLIC_URL=api.localqr.earth
         APP_KEYS=${{ secrets.APP_KEYS }}
         API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}
         ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}
