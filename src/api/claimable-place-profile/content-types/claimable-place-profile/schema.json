@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "claimable_place_profiles",
+  "info": {
+    "singularName": "claimable-place-profile",
+    "pluralName": "claimable-place-profiles",
+    "displayName": "Claimable_Place_Profile",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Place_Id": {
+      "type": "uid"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "Lat": {
+      "type": "decimal"
+    },
+    "Long": {
+      "type": "decimal"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Website": {
+      "type": "string"
+    },
+    "Meta_Data": {
+      "type": "json"
+    },
+    "Recommendation_Count": {
+      "type": "integer"
+    },
+    "Is_Claimed": {
+      "type": "boolean",
+      "default": false
+    },
+    "Added_By_Users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::account.account",
+      "inversedBy": "claimable_place_profiles"
+    },
+    "Claiming_Account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::account.account",
+      "inversedBy": "claimable_place_profile"
+    }
+  }
+}

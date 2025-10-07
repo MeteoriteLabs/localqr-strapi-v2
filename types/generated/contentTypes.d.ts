@@ -428,6 +428,14 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    claimable_place_profile: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::claimable-place-profile.claimable-place-profile'
+    >;
+    claimable_place_profiles: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::claimable-place-profile.claimable-place-profile'
+    >;
     community_boards: Schema.Attribute.Relation<
       'oneToMany',
       'api::community.community'
@@ -513,6 +521,53 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'manyToMany',
       'plugin::users-permissions.user'
     >;
+  };
+}
+
+export interface ApiClaimablePlaceProfileClaimablePlaceProfile
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'claimable_place_profiles';
+  info: {
+    description: '';
+    displayName: 'Claimable_Place_Profile';
+    pluralName: 'claimable-place-profiles';
+    singularName: 'claimable-place-profile';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Added_By_Users: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::account.account'
+    >;
+    Address: Schema.Attribute.String;
+    Claiming_Account: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::account.account'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Is_Claimed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    Lat: Schema.Attribute.Decimal;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::claimable-place-profile.claimable-place-profile'
+    > &
+      Schema.Attribute.Private;
+    Long: Schema.Attribute.Decimal;
+    Meta_Data: Schema.Attribute.JSON;
+    Name: Schema.Attribute.String;
+    Phone: Schema.Attribute.String;
+    Place_Id: Schema.Attribute.UID;
+    publishedAt: Schema.Attribute.DateTime;
+    Recommendation_Count: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Website: Schema.Attribute.String;
   };
 }
 
@@ -1586,6 +1641,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::account.account': ApiAccountAccount;
+      'api::claimable-place-profile.claimable-place-profile': ApiClaimablePlaceProfileClaimablePlaceProfile;
       'api::community.community': ApiCommunityCommunity;
       'api::faq.faq': ApiFaqFaq;
       'api::follower.follower': ApiFollowerFollower;
