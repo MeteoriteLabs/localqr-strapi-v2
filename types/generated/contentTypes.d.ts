@@ -432,10 +432,6 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::claimable-place-profile.claimable-place-profile'
     >;
-    claimable_place_profiles: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::claimable-place-profile.claimable-place-profile'
-    >;
     community_boards: Schema.Attribute.Relation<
       'oneToMany',
       'api::community.community'
@@ -537,10 +533,7 @@ export interface ApiClaimablePlaceProfileClaimablePlaceProfile
     draftAndPublish: false;
   };
   attributes: {
-    Added_By_Users: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::account.account'
-    >;
+    Added_By_User: Schema.Attribute.JSON;
     Address: Schema.Attribute.String;
     Claiming_Account: Schema.Attribute.Relation<
       'oneToOne',

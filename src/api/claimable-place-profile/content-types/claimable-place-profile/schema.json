@@ -42,17 +42,14 @@
       "type": "boolean",
       "default": false
     },
-    "Added_By_Users": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::account.account",
-      "inversedBy": "claimable_place_profiles"
-    },
     "Claiming_Account": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::account.account",
       "inversedBy": "claimable_place_profile"
+    },
+    "Added_By_User": {
+      "type": "json"
     }
   }
 }

@@ -189,12 +189,6 @@
     "Feed_Data": {
       "type": "json"
     },
-    "claimable_place_profiles": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::claimable-place-profile.claimable-place-profile",
-      "mappedBy": "Added_By_Users"
-    },
     "claimable_place_profile": {
       "type": "relation",
       "relation": "oneToOne",
