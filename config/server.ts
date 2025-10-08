@@ -3,7 +3,7 @@ export default ({ env }) => ({
   port: env.int('PORT', 1337),
   url: env('PUBLIC_URL', 'http://13.126.235.177:1337'),
   proxy: { koa: env.bool('IS_PROXIED', true) },
-  app: 
+  app: {
     keys: env.array('APP_KEYS'),
   },
 });
