@@ -194,6 +194,10 @@
       "relation": "oneToOne",
       "target": "api::claimable-place-profile.claimable-place-profile",
       "mappedBy": "Claiming_Account"
+    },
+    "Is_Claimable": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

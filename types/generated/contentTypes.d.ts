@@ -441,6 +441,7 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     Feed_Data: Schema.Attribute.JSON;
     guides: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'>;
+    Is_Claimable: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

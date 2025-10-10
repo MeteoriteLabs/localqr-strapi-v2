@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-07T08:42:29.153Z"
+    "x-generation-date": "2025-10-09T10:03:54.053Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -9745,6 +9745,9 @@
                 ],
                 "example": "string or id"
               },
+              "Is_Claimable": {
+                "type": "boolean"
+              },
               "locale": {
                 "type": "string"
               },
@@ -12184,6 +12187,9 @@
                           }
                         }
                       },
+                      "Is_Claimable": {
+                        "type": "boolean"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -12654,6 +12660,9 @@
                 "type": "string"
               }
             }
+          },
+          "Is_Claimable": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -15281,6 +15290,9 @@
                     }
                   }
                 }
+              },
+              "Is_Claimable": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -18067,6 +18079,9 @@
                     }
                   }
                 }
+              },
+              "Is_Claimable": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -21674,6 +21689,9 @@
                   }
                 }
               },
+              "Is_Claimable": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -24068,6 +24086,9 @@
                         }
                       }
                     }
+                  },
+                  "Is_Claimable": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -29216,6 +29237,9 @@
                   }
                 }
               },
+              "Is_Claimable": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -32246,6 +32270,9 @@
                       }
                     }
                   },
+                  "Is_Claimable": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -35081,6 +35108,9 @@
                             }
                           }
                         }
+                      },
+                      "Is_Claimable": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
