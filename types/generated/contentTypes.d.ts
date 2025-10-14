@@ -1121,6 +1121,41 @@ export interface ApiUnsubscribeUnsubscribe extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiVerifyClaimVerifyClaim extends Struct.CollectionTypeSchema {
+  collectionName: 'verify_claims';
+  info: {
+    description: '';
+    displayName: 'Verify_Claim';
+    pluralName: 'verify-claims';
+    singularName: 'verify-claim';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Attachment: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Email: Schema.Attribute.Email;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::verify-claim.verify-claim'
+    > &
+      Schema.Attribute.Private;
+    Message: Schema.Attribute.Text;
+    Phone: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1650,6 +1685,7 @@ declare module '@strapi/strapi' {
       'api::recommended-place.recommended-place': ApiRecommendedPlaceRecommendedPlace;
       'api::supporter.supporter': ApiSupporterSupporter;
       'api::unsubscribe.unsubscribe': ApiUnsubscribeUnsubscribe;
+      'api::verify-claim.verify-claim': ApiVerifyClaimVerifyClaim;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "verify_claims",
+  "info": {
+    "singularName": "verify-claim",
+    "pluralName": "verify-claims",
+    "displayName": "Verify_Claim",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Email": {
+      "type": "email"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Message": {
+      "type": "text"
+    },
+    "Attachment": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
