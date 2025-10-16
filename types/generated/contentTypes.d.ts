@@ -1148,6 +1148,7 @@ export interface ApiVerifyClaimVerifyClaim extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     Message: Schema.Attribute.Text;
+    Name: Schema.Attribute.String;
     Phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
