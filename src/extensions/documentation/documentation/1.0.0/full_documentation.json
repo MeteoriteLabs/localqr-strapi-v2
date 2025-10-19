@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-15T14:36:17.039Z"
+    "x-generation-date": "2025-10-18T09:34:48.068Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12531,7 +12531,6 @@
                                 "Tips"
                               ]
                             },
-                            "Analytics": {},
                             "Guide_Tags": {},
                             "createdAt": {
                               "type": "string",
@@ -15635,7 +15634,6 @@
                         "Tips"
                       ]
                     },
-                    "Analytics": {},
                     "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
@@ -18424,7 +18422,6 @@
                         "Tips"
                       ]
                     },
-                    "Analytics": {},
                     "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
@@ -19703,7 +19700,6 @@
                   "Tips"
                 ]
               },
-              "Analytics": {},
               "Guide_Tags": {},
               "locale": {
                 "type": "string"
@@ -22033,7 +22029,6 @@
                         "Tips"
                       ]
                     },
-                    "Analytics": {},
                     "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
@@ -22411,7 +22406,6 @@
               "Tips"
             ]
           },
-          "Analytics": {},
           "Guide_Tags": {},
           "createdAt": {
             "type": "string",
@@ -25016,7 +25010,6 @@
                   "Tips"
                 ]
               },
-              "Analytics": {},
               "Guide_Tags": {},
               "createdAt": {
                 "type": "string",
@@ -29581,7 +29574,6 @@
                         "Tips"
                       ]
                     },
-                    "Analytics": {},
                     "Guide_Tags": {},
                     "createdAt": {
                       "type": "string",
@@ -32614,7 +32606,6 @@
                             "Tips"
                           ]
                         },
-                        "Analytics": {},
                         "Guide_Tags": {},
                         "createdAt": {
                           "type": "string",
@@ -35453,7 +35444,6 @@
                                 "Tips"
                               ]
                             },
-                            "Analytics": {},
                             "Guide_Tags": {},
                             "createdAt": {
                               "type": "string",

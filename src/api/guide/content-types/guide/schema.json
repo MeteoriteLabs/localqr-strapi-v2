@@ -64,9 +64,6 @@
         "Tips"
       ]
     },
-    "Analytics": {
-      "type": "json"
-    },
     "Guide_Tags": {
       "type": "json"
     }

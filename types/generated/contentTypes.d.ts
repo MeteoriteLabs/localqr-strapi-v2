@@ -733,7 +733,6 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
-    Analytics: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
