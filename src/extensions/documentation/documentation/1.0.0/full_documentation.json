@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-18T09:34:48.068Z"
+    "x-generation-date": "2025-10-19T18:16:46.896Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10100,7 +10100,8 @@
         "properties": {
           "data": {
             "required": [
-              "Primary_Address"
+              "Primary_Address",
+              "localtunes_integrated"
             ],
             "type": "object",
             "properties": {
@@ -10254,6 +10255,13 @@
               "Is_Claimable": {
                 "type": "boolean"
               },
+              "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "locale": {
                 "type": "string"
               },
@@ -10313,7 +10321,8 @@
       "Account": {
         "type": "object",
         "required": [
-          "Primary_Address"
+          "Primary_Address",
+          "localtunes_integrated"
         ],
         "properties": {
           "id": {
@@ -12695,6 +12704,13 @@
                       "Is_Claimable": {
                         "type": "boolean"
                       },
+                      "localtunes_integrated": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -13168,6 +13184,13 @@
           },
           "Is_Claimable": {
             "type": "boolean"
+          },
+          "localtunes_integrated": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -15797,6 +15820,13 @@
               },
               "Is_Claimable": {
                 "type": "boolean"
+              },
+              "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
               },
               "createdAt": {
                 "type": "string",
@@ -18585,6 +18615,13 @@
               },
               "Is_Claimable": {
                 "type": "boolean"
+              },
+              "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
               },
               "createdAt": {
                 "type": "string",
@@ -22193,6 +22230,13 @@
               "Is_Claimable": {
                 "type": "boolean"
               },
+              "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -24589,6 +24633,13 @@
                   },
                   "Is_Claimable": {
                     "type": "boolean"
+                  },
+                  "localtunes_integrated": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
                   },
                   "createdAt": {
                     "type": "string",
@@ -29738,6 +29789,13 @@
               "Is_Claimable": {
                 "type": "boolean"
               },
+              "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -32770,6 +32828,13 @@
                   "Is_Claimable": {
                     "type": "boolean"
                   },
+                  "localtunes_integrated": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -35607,6 +35672,13 @@
                       },
                       "Is_Claimable": {
                         "type": "boolean"
+                      },
+                      "localtunes_integrated": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
                       },
                       "createdAt": {
                         "type": "string",

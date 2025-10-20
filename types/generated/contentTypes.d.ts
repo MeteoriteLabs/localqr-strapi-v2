@@ -447,6 +447,9 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::account.account'
     >;
+    localtunes_integrated: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'No'>;
     mobile_number: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

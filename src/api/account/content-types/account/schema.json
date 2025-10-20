@@ -198,6 +198,15 @@
     "Is_Claimable": {
       "type": "boolean",
       "default": false
+    },
+    "localtunes_integrated": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "No",
+      "required": true
     }
   }
 }
