@@ -66,6 +66,9 @@
     },
     "Guide_Tags": {
       "type": "json"
+    },
+    "Place_Details": {
+      "type": "json"
     }
   }
 }

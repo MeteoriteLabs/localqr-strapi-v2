@@ -757,6 +757,7 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'> &
       Schema.Attribute.Private;
+    Place_Details: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String;
     Tips_Notes: Schema.Attribute.Blocks;

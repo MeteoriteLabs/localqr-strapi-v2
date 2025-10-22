@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-19T18:16:46.896Z"
+    "x-generation-date": "2025-10-21T11:49:50.792Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12541,6 +12541,7 @@
                               ]
                             },
                             "Guide_Tags": {},
+                            "Place_Details": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -15658,6 +15659,7 @@
                       ]
                     },
                     "Guide_Tags": {},
+                    "Place_Details": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -18453,6 +18455,7 @@
                       ]
                     },
                     "Guide_Tags": {},
+                    "Place_Details": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -19738,6 +19741,7 @@
                 ]
               },
               "Guide_Tags": {},
+              "Place_Details": {},
               "locale": {
                 "type": "string"
               },
@@ -22067,6 +22071,7 @@
                       ]
                     },
                     "Guide_Tags": {},
+                    "Place_Details": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -22451,6 +22456,7 @@
             ]
           },
           "Guide_Tags": {},
+          "Place_Details": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -25062,6 +25068,7 @@
                 ]
               },
               "Guide_Tags": {},
+              "Place_Details": {},
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -29626,6 +29633,7 @@
                       ]
                     },
                     "Guide_Tags": {},
+                    "Place_Details": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -32665,6 +32673,7 @@
                           ]
                         },
                         "Guide_Tags": {},
+                        "Place_Details": {},
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -35510,6 +35519,7 @@
                               ]
                             },
                             "Guide_Tags": {},
+                            "Place_Details": {},
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
