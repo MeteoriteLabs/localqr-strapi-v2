@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-21T11:49:50.792Z"
+    "x-generation-date": "2025-10-22T18:50:49.331Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10262,6 +10262,27 @@
                   "No"
                 ]
               },
+              "public_recommendations": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_profile": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_music": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "locale": {
                 "type": "string"
               },
@@ -12342,6 +12363,7 @@
                                   "Packing_List": {},
                                   "Pre_Tasks": {},
                                   "Section_tags": {},
+                                  "Day_Division": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -12706,6 +12728,27 @@
                         "type": "boolean"
                       },
                       "localtunes_integrated": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
+                      "public_recommendations": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
+                      "public_profile": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
+                      "public_music": {
                         "type": "string",
                         "enum": [
                           "Yes",
@@ -13187,6 +13230,27 @@
             "type": "boolean"
           },
           "localtunes_integrated": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ]
+          },
+          "public_recommendations": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ]
+          },
+          "public_profile": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ]
+          },
+          "public_music": {
             "type": "string",
             "enum": [
               "Yes",
@@ -15460,6 +15524,7 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
+                          "Day_Division": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -15824,6 +15889,27 @@
                 "type": "boolean"
               },
               "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_recommendations": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_profile": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_music": {
                 "type": "string",
                 "enum": [
                   "Yes",
@@ -18256,6 +18342,7 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
+                          "Day_Division": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -18620,6 +18707,27 @@
                 "type": "boolean"
               },
               "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_recommendations": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_profile": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_music": {
                 "type": "string",
                 "enum": [
                   "Yes",
@@ -21872,6 +21980,7 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
+                          "Day_Division": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -22242,6 +22351,27 @@
                   "No"
                 ]
               },
+              "public_recommendations": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_profile": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_music": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -22568,6 +22698,7 @@
               "Packing_List": {},
               "Pre_Tasks": {},
               "Section_tags": {},
+              "Day_Division": {},
               "locale": {
                 "type": "string"
               },
@@ -24647,6 +24778,27 @@
                       "No"
                     ]
                   },
+                  "public_recommendations": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
+                  "public_profile": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
+                  "public_music": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -24869,6 +25021,7 @@
                     "Packing_List": {},
                     "Pre_Tasks": {},
                     "Section_tags": {},
+                    "Day_Division": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -25258,6 +25411,7 @@
           "Packing_List": {},
           "Pre_Tasks": {},
           "Section_tags": {},
+          "Day_Division": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -29434,6 +29588,7 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
+                          "Day_Division": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -29798,6 +29953,27 @@
                 "type": "boolean"
               },
               "localtunes_integrated": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_recommendations": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_profile": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "public_music": {
                 "type": "string",
                 "enum": [
                   "Yes",
@@ -32474,6 +32650,7 @@
                               "Packing_List": {},
                               "Pre_Tasks": {},
                               "Section_tags": {},
+                              "Day_Division": {},
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -32838,6 +33015,27 @@
                     "type": "boolean"
                   },
                   "localtunes_integrated": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
+                  "public_recommendations": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
+                  "public_profile": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
+                  },
+                  "public_music": {
                     "type": "string",
                     "enum": [
                       "Yes",
@@ -35320,6 +35518,7 @@
                                   "Packing_List": {},
                                   "Pre_Tasks": {},
                                   "Section_tags": {},
+                                  "Day_Division": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -35684,6 +35883,27 @@
                         "type": "boolean"
                       },
                       "localtunes_integrated": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
+                      "public_recommendations": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
+                      "public_profile": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
+                      "public_music": {
                         "type": "string",
                         "enum": [
                           "Yes",

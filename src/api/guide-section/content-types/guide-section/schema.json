@@ -51,6 +51,9 @@
     },
     "Section_tags": {
       "type": "json"
+    },
+    "Day_Division": {
+      "type": "json"
     }
   }
 }

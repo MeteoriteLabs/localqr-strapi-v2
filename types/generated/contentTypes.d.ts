@@ -491,12 +491,18 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    public_music: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.DefaultTo<'Yes'>;
+    public_profile: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.DefaultTo<'Yes'>;
     Public_Profile_Address: Schema.Attribute.JSON &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    public_recommendations: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.DefaultTo<'Yes'>;
     publishedAt: Schema.Attribute.DateTime;
     recommendation_lists: Schema.Attribute.Relation<
       'oneToMany',
@@ -697,6 +703,7 @@ export interface ApiGuideSectionGuideSection
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Day_Division: Schema.Attribute.JSON;
     Description: Schema.Attribute.Blocks;
     guide: Schema.Attribute.Relation<'manyToOne', 'api::guide.guide'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

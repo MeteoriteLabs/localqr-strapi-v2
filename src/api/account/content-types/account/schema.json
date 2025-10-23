@@ -207,6 +207,30 @@
       ],
       "default": "No",
       "required": true
+    },
+    "public_recommendations": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
+    },
+    "public_profile": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
+    },
+    "public_music": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
     }
   }
 }
