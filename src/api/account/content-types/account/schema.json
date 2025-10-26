@@ -231,6 +231,9 @@
         "No"
       ],
       "default": "Yes"
+    },
+    "localtunes_public": {
+      "type": "string"
     }
   }
 }

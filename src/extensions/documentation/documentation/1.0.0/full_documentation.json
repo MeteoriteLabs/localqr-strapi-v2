@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-22T18:50:49.331Z"
+    "x-generation-date": "2025-10-25T13:20:48.750Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -10283,6 +10283,9 @@
                   "No"
                 ]
               },
+              "localtunes_public": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -12755,6 +12758,9 @@
                           "No"
                         ]
                       },
+                      "localtunes_public": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -13256,6 +13262,9 @@
               "Yes",
               "No"
             ]
+          },
+          "localtunes_public": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -15915,6 +15924,9 @@
                   "Yes",
                   "No"
                 ]
+              },
+              "localtunes_public": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -18733,6 +18745,9 @@
                   "Yes",
                   "No"
                 ]
+              },
+              "localtunes_public": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -22372,6 +22387,9 @@
                   "No"
                 ]
               },
+              "localtunes_public": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -24798,6 +24816,9 @@
                       "Yes",
                       "No"
                     ]
+                  },
+                  "localtunes_public": {
+                    "type": "string"
                   },
                   "createdAt": {
                     "type": "string",
@@ -29980,6 +30001,9 @@
                   "No"
                 ]
               },
+              "localtunes_public": {
+                "type": "string"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -33042,6 +33066,9 @@
                       "No"
                     ]
                   },
+                  "localtunes_public": {
+                    "type": "string"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -35909,6 +35936,9 @@
                           "Yes",
                           "No"
                         ]
+                      },
+                      "localtunes_public": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",

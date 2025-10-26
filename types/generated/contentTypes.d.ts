@@ -450,6 +450,7 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
     localtunes_integrated: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'No'>;
+    localtunes_public: Schema.Attribute.String;
     mobile_number: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
