@@ -704,7 +704,6 @@ export interface ApiGuideSectionGuideSection
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Day_Division: Schema.Attribute.JSON;
     Description: Schema.Attribute.Blocks;
     guide: Schema.Attribute.Relation<'manyToOne', 'api::guide.guide'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -724,7 +723,10 @@ export interface ApiGuideSectionGuideSection
     Recommendation_Activity: Schema.Attribute.JSON;
     Section_tags: Schema.Attribute.JSON;
     Sequence: Schema.Attribute.Decimal;
+    Stay: Schema.Attribute.JSON;
+    Timeline: Schema.Attribute.JSON;
     Title: Schema.Attribute.String;
+    Transport: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

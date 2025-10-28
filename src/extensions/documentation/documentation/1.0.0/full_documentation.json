@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-10-25T13:20:48.750Z"
+    "x-generation-date": "2025-10-27T17:54:57.758Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12366,7 +12366,9 @@
                                   "Packing_List": {},
                                   "Pre_Tasks": {},
                                   "Section_tags": {},
-                                  "Day_Division": {},
+                                  "Timeline": {},
+                                  "Transport": {},
+                                  "Stay": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -15533,7 +15535,9 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
-                          "Day_Division": {},
+                          "Timeline": {},
+                          "Transport": {},
+                          "Stay": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -18354,7 +18358,9 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
-                          "Day_Division": {},
+                          "Timeline": {},
+                          "Transport": {},
+                          "Stay": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -21995,7 +22001,9 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
-                          "Day_Division": {},
+                          "Timeline": {},
+                          "Transport": {},
+                          "Stay": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -22716,7 +22724,9 @@
               "Packing_List": {},
               "Pre_Tasks": {},
               "Section_tags": {},
-              "Day_Division": {},
+              "Timeline": {},
+              "Transport": {},
+              "Stay": {},
               "locale": {
                 "type": "string"
               },
@@ -25042,7 +25052,9 @@
                     "Packing_List": {},
                     "Pre_Tasks": {},
                     "Section_tags": {},
-                    "Day_Division": {},
+                    "Timeline": {},
+                    "Transport": {},
+                    "Stay": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -25432,7 +25444,9 @@
           "Packing_List": {},
           "Pre_Tasks": {},
           "Section_tags": {},
-          "Day_Division": {},
+          "Timeline": {},
+          "Transport": {},
+          "Stay": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -29609,7 +29623,9 @@
                           "Packing_List": {},
                           "Pre_Tasks": {},
                           "Section_tags": {},
-                          "Day_Division": {},
+                          "Timeline": {},
+                          "Transport": {},
+                          "Stay": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -32674,7 +32690,9 @@
                               "Packing_List": {},
                               "Pre_Tasks": {},
                               "Section_tags": {},
-                              "Day_Division": {},
+                              "Timeline": {},
+                              "Transport": {},
+                              "Stay": {},
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -35545,7 +35563,9 @@
                                   "Packing_List": {},
                                   "Pre_Tasks": {},
                                   "Section_tags": {},
-                                  "Day_Division": {},
+                                  "Timeline": {},
+                                  "Transport": {},
+                                  "Stay": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"

@@ -52,7 +52,13 @@
     "Section_tags": {
       "type": "json"
     },
-    "Day_Division": {
+    "Timeline": {
+      "type": "json"
+    },
+    "Transport": {
+      "type": "json"
+    },
+    "Stay": {
       "type": "json"
     }
   }
