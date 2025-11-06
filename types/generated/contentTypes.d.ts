@@ -772,6 +772,7 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.String;
     Tips_Notes: Schema.Attribute.Blocks;
     Title: Schema.Attribute.String;
+    Transportation: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
