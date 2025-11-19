@@ -80,6 +80,13 @@
     },
     "user_recommendation_note": {
       "type": "richtext"
+    },
+    "Recommendation_Type": {
+      "type": "enumeration",
+      "enum": [
+        "place",
+        "person"
+      ]
     }
   }
 }

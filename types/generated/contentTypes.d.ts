@@ -1054,6 +1054,7 @@ export interface ApiRecommendedPlaceRecommendedPlace
       'oneToOne',
       'api::recommendation-sub-category.recommendation-sub-category'
     >;
+    Recommendation_Type: Schema.Attribute.Enumeration<['place', 'person']>;
     Source_Of_Recommendation: Schema.Attribute.Enumeration<
       ['self', 'suggestion']
     >;

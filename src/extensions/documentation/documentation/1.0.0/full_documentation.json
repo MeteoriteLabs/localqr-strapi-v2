@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-07T05:03:33.828Z"
+    "x-generation-date": "2025-11-18T11:18:02.059Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -11834,6 +11834,13 @@
                                   "user_recommendation_note": {
                                     "type": "string"
                                   },
+                                  "Recommendation_Type": {
+                                    "type": "string",
+                                    "enum": [
+                                      "place",
+                                      "person"
+                                    ]
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -15004,6 +15011,13 @@
                           "user_recommendation_note": {
                             "type": "string"
                           },
+                          "Recommendation_Type": {
+                            "type": "string",
+                            "enum": [
+                              "place",
+                              "person"
+                            ]
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -17827,6 +17841,13 @@
                           },
                           "user_recommendation_note": {
                             "type": "string"
+                          },
+                          "Recommendation_Type": {
+                            "type": "string",
+                            "enum": [
+                              "place",
+                              "person"
+                            ]
                           },
                           "createdAt": {
                             "type": "string",
@@ -21473,6 +21494,13 @@
                           "user_recommendation_note": {
                             "type": "string"
                           },
+                          "Recommendation_Type": {
+                            "type": "string",
+                            "enum": [
+                              "place",
+                              "person"
+                            ]
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -24348,6 +24376,13 @@
                               },
                               "user_recommendation_note": {
                                 "type": "string"
+                              },
+                              "Recommendation_Type": {
+                                "type": "string",
+                                "enum": [
+                                  "place",
+                                  "person"
+                                ]
                               },
                               "createdAt": {
                                 "type": "string",
@@ -29098,6 +29133,13 @@
                           "user_recommendation_note": {
                             "type": "string"
                           },
+                          "Recommendation_Type": {
+                            "type": "string",
+                            "enum": [
+                              "place",
+                              "person"
+                            ]
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -30812,6 +30854,13 @@
               },
               "user_recommendation_note": {
                 "type": "string"
+              },
+              "Recommendation_Type": {
+                "type": "string",
+                "enum": [
+                  "place",
+                  "person"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -33448,6 +33497,13 @@
                     "user_recommendation_note": {
                       "type": "string"
                     },
+                    "Recommendation_Type": {
+                      "type": "string",
+                      "enum": [
+                        "place",
+                        "person"
+                      ]
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -33579,6 +33635,13 @@
           },
           "user_recommendation_note": {
             "type": "string"
+          },
+          "Recommendation_Type": {
+            "type": "string",
+            "enum": [
+              "place",
+              "person"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -36197,6 +36260,13 @@
               },
               "user_recommendation_note": {
                 "type": "string"
+              },
+              "Recommendation_Type": {
+                "type": "string",
+                "enum": [
+                  "place",
+                  "person"
+                ]
               },
               "createdAt": {
                 "type": "string",
