@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscription_plan_bases",
+  "info": {
+    "singularName": "subscription-plan-base",
+    "pluralName": "subscription-plan-bases",
+    "displayName": "Subscription_plan_base",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "plan_name": {
+      "type": "string"
+    },
+    "cost": {
+      "type": "string"
+    },
+    "songs_quota": {
+      "type": "string"
+    },
+    "features": {
+      "type": "json"
+    },
+    "duration": {
+      "type": "enumeration",
+      "enum": [
+        "monthly",
+        "yearly"
+      ]
+    },
+    "plan_code": {
+      "type": "string"
+    },
+    "feature_control": {
+      "type": "json"
+    },
+    "max_devices": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_subscription_plans",
+  "info": {
+    "singularName": "user-subscription-plan",
+    "pluralName": "user-subscription-plans",
+    "displayName": "User_subscription_plan",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "user_id": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "plan_id": {
+      "type": "string"
+    }
+  }
+}

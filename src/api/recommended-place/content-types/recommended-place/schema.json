@@ -87,6 +87,9 @@
         "place",
         "person"
       ]
+    },
+    "Person_Details": {
+      "type": "json"
     }
   }
 }

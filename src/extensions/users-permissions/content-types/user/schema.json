@@ -83,6 +83,10 @@
     "Language_Choice": {
       "type": "string",
       "default": "en"
+    },
+    "is_subscribed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

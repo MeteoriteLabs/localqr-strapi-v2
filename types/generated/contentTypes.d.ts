@@ -1038,6 +1038,7 @@ export interface ApiRecommendedPlaceRecommendedPlace
       true
     >;
     media_details: Schema.Attribute.JSON;
+    Person_Details: Schema.Attribute.JSON;
     Place_Details: Schema.Attribute.JSON;
     Places_Social_Link: Schema.Attribute.String;
     Places_Website: Schema.Attribute.String;
@@ -1069,6 +1070,43 @@ export interface ApiRecommendedPlaceRecommendedPlace
     user_recommendation_note: Schema.Attribute.RichText;
     Users_Place_Note: Schema.Attribute.Blocks;
     Users_Social_URL: Schema.Attribute.String;
+  };
+}
+
+export interface ApiSubscriptionPlanBaseSubscriptionPlanBase
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'subscription_plan_bases';
+  info: {
+    description: '';
+    displayName: 'Subscription_plan_base';
+    pluralName: 'subscription-plan-bases';
+    singularName: 'subscription-plan-base';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cost: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    duration: Schema.Attribute.Enumeration<['monthly', 'yearly']>;
+    feature_control: Schema.Attribute.JSON;
+    features: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subscription-plan-base.subscription-plan-base'
+    > &
+      Schema.Attribute.Private;
+    max_devices: Schema.Attribute.Integer;
+    plan_code: Schema.Attribute.String;
+    plan_name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    songs_quota: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1133,6 +1171,39 @@ export interface ApiUnsubscribeUnsubscribe extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiUserSubscriptionPlanUserSubscriptionPlan
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'user_subscription_plans';
+  info: {
+    description: '';
+    displayName: 'User_subscription_plan';
+    pluralName: 'user-subscription-plans';
+    singularName: 'user-subscription-plan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    end_date: Schema.Attribute.DateTime;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::user-subscription-plan.user-subscription-plan'
+    > &
+      Schema.Attribute.Private;
+    plan_id: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    start_date: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_id: Schema.Attribute.String;
   };
 }
 
@@ -1641,6 +1712,7 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    is_subscribed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     Language_Choice: Schema.Attribute.String & Schema.Attribute.DefaultTo<'en'>;
     Language_preference: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1699,8 +1771,10 @@ declare module '@strapi/strapi' {
       'api::recommendation-list.recommendation-list': ApiRecommendationListRecommendationList;
       'api::recommendation-sub-category.recommendation-sub-category': ApiRecommendationSubCategoryRecommendationSubCategory;
       'api::recommended-place.recommended-place': ApiRecommendedPlaceRecommendedPlace;
+      'api::subscription-plan-base.subscription-plan-base': ApiSubscriptionPlanBaseSubscriptionPlanBase;
       'api::supporter.supporter': ApiSupporterSupporter;
       'api::unsubscribe.unsubscribe': ApiUnsubscribeUnsubscribe;
+      'api::user-subscription-plan.user-subscription-plan': ApiUserSubscriptionPlanUserSubscriptionPlan;
       'api::verify-claim.verify-claim': ApiVerifyClaimVerifyClaim;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
