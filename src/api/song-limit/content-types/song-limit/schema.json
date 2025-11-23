@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "song_limits",
+  "info": {
+    "singularName": "song-limit",
+    "pluralName": "song-limits",
+    "displayName": "Song_limit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "song_requests": {
+      "type": "integer"
+    }
+  }
+}

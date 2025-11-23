@@ -1073,6 +1073,35 @@ export interface ApiRecommendedPlaceRecommendedPlace
   };
 }
 
+export interface ApiSongLimitSongLimit extends Struct.CollectionTypeSchema {
+  collectionName: 'song_limits';
+  info: {
+    displayName: 'Song_limit';
+    pluralName: 'song-limits';
+    singularName: 'song-limit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::song-limit.song-limit'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    song_requests: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    username: Schema.Attribute.String;
+  };
+}
+
 export interface ApiSubscriptionPlanBaseSubscriptionPlanBase
   extends Struct.CollectionTypeSchema {
   collectionName: 'subscription_plan_bases';
@@ -1771,6 +1800,7 @@ declare module '@strapi/strapi' {
       'api::recommendation-list.recommendation-list': ApiRecommendationListRecommendationList;
       'api::recommendation-sub-category.recommendation-sub-category': ApiRecommendationSubCategoryRecommendationSubCategory;
       'api::recommended-place.recommended-place': ApiRecommendedPlaceRecommendedPlace;
+      'api::song-limit.song-limit': ApiSongLimitSongLimit;
       'api::subscription-plan-base.subscription-plan-base': ApiSubscriptionPlanBaseSubscriptionPlanBase;
       'api::supporter.supporter': ApiSupporterSupporter;
       'api::unsubscribe.unsubscribe': ApiUnsubscribeUnsubscribe;
