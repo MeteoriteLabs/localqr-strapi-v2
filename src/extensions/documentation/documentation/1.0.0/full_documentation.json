@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-22T07:47:46.572Z"
+    "x-generation-date": "2025-11-23T16:38:46.234Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -13895,6 +13895,7 @@
                                   "Timeline": {},
                                   "Transport": {},
                                   "Stay": {},
+                                  "Budget": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -14088,9 +14089,7 @@
                               "type": "string",
                               "enum": [
                                 "Itinerary",
-                                "Theme",
-                                "Mixed",
-                                "Tips"
+                                "Theme"
                               ]
                             },
                             "Guide_Tags": {},
@@ -17079,6 +17078,7 @@
                           "Timeline": {},
                           "Transport": {},
                           "Stay": {},
+                          "Budget": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -17272,9 +17272,7 @@
                       "type": "string",
                       "enum": [
                         "Itinerary",
-                        "Theme",
-                        "Mixed",
-                        "Tips"
+                        "Theme"
                       ]
                     },
                     "Guide_Tags": {},
@@ -19914,6 +19912,7 @@
                           "Timeline": {},
                           "Transport": {},
                           "Stay": {},
+                          "Budget": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -20107,9 +20106,7 @@
                       "type": "string",
                       "enum": [
                         "Itinerary",
-                        "Theme",
-                        "Mixed",
-                        "Tips"
+                        "Theme"
                       ]
                     },
                     "Guide_Tags": {},
@@ -21418,9 +21415,7 @@
                 "type": "string",
                 "enum": [
                   "Itinerary",
-                  "Theme",
-                  "Mixed",
-                  "Tips"
+                  "Theme"
                 ]
               },
               "Guide_Tags": {},
@@ -23570,6 +23565,7 @@
                           "Timeline": {},
                           "Transport": {},
                           "Stay": {},
+                          "Budget": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -23763,9 +23759,7 @@
                       "type": "string",
                       "enum": [
                         "Itinerary",
-                        "Theme",
-                        "Mixed",
-                        "Tips"
+                        "Theme"
                       ]
                     },
                     "Guide_Tags": {},
@@ -24173,9 +24167,7 @@
             "type": "string",
             "enum": [
               "Itinerary",
-              "Theme",
-              "Mixed",
-              "Tips"
+              "Theme"
             ]
           },
           "Guide_Tags": {},
@@ -24295,6 +24287,7 @@
               "Timeline": {},
               "Transport": {},
               "Stay": {},
+              "Budget": {},
               "locale": {
                 "type": "string"
               },
@@ -26634,6 +26627,7 @@
                     "Timeline": {},
                     "Transport": {},
                     "Stay": {},
+                    "Budget": {},
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -26827,9 +26821,7 @@
                 "type": "string",
                 "enum": [
                   "Itinerary",
-                  "Theme",
-                  "Mixed",
-                  "Tips"
+                  "Theme"
                 ]
               },
               "Guide_Tags": {},
@@ -27027,6 +27019,7 @@
           "Timeline": {},
           "Transport": {},
           "Stay": {},
+          "Budget": {},
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -31217,6 +31210,7 @@
                           "Timeline": {},
                           "Transport": {},
                           "Stay": {},
+                          "Budget": {},
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -31410,9 +31404,7 @@
                       "type": "string",
                       "enum": [
                         "Itinerary",
-                        "Theme",
-                        "Mixed",
-                        "Tips"
+                        "Theme"
                       ]
                     },
                     "Guide_Tags": {},
@@ -34296,6 +34288,7 @@
                               "Timeline": {},
                               "Transport": {},
                               "Stay": {},
+                              "Budget": {},
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -34489,9 +34482,7 @@
                           "type": "string",
                           "enum": [
                             "Itinerary",
-                            "Theme",
-                            "Mixed",
-                            "Tips"
+                            "Theme"
                           ]
                         },
                         "Guide_Tags": {},
@@ -38161,6 +38152,7 @@
                                   "Timeline": {},
                                   "Transport": {},
                                   "Stay": {},
+                                  "Budget": {},
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -38354,9 +38346,7 @@
                               "type": "string",
                               "enum": [
                                 "Itinerary",
-                                "Theme",
-                                "Mixed",
-                                "Tips"
+                                "Theme"
                               ]
                             },
                             "Guide_Tags": {},

@@ -60,6 +60,9 @@
     },
     "Stay": {
       "type": "json"
+    },
+    "Budget": {
+      "type": "json"
     }
   }
 }

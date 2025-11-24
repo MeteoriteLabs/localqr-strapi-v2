@@ -59,9 +59,7 @@
       "type": "enumeration",
       "enum": [
         "Itinerary",
-        "Theme",
-        "Mixed",
-        "Tips"
+        "Theme"
       ]
     },
     "Guide_Tags": {

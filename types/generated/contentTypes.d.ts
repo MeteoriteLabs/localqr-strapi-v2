@@ -701,6 +701,7 @@ export interface ApiGuideSectionGuideSection
     draftAndPublish: true;
   };
   attributes: {
+    Budget: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -761,9 +762,7 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
       'api::guide-section.guide-section'
     >;
     Guide_Tags: Schema.Attribute.JSON;
-    Guide_Type: Schema.Attribute.Enumeration<
-      ['Itinerary', 'Theme', 'Mixed', 'Tips']
-    >;
+    Guide_Type: Schema.Attribute.Enumeration<['Itinerary', 'Theme']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'> &
       Schema.Attribute.Private;
