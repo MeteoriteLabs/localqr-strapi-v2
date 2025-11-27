@@ -1227,6 +1227,9 @@ export interface ApiUserSubscriptionPlanUserSubscriptionPlan
       Schema.Attribute.Private;
     plan_id: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    razorpay_customer_id: Schema.Attribute.String;
+    razorpay_plan_id: Schema.Attribute.String;
+    razorpay_sub_id: Schema.Attribute.String;
     start_date: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1758,6 +1761,7 @@ export interface PluginUsersPermissionsUser
       }>;
     provider: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    razorpay_customer_id: Schema.Attribute.String;
     resetPasswordToken: Schema.Attribute.String & Schema.Attribute.Private;
     role: Schema.Attribute.Relation<
       'manyToOne',

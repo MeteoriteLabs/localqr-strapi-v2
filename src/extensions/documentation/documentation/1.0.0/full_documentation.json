@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-23T16:38:46.234Z"
+    "x-generation-date": "2025-11-26T20:41:36.043Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14349,6 +14349,9 @@
                 "is_subscribed": {
                   "type": "boolean"
                 },
+                "razorpay_customer_id": {
+                  "type": "string"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -15502,6 +15505,9 @@
                     },
                     "is_subscribed": {
                       "type": "boolean"
+                    },
+                    "razorpay_customer_id": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -18553,6 +18559,9 @@
                     },
                     "is_subscribed": {
                       "type": "boolean"
+                    },
+                    "razorpay_customer_id": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -21990,6 +21999,9 @@
                     "is_subscribed": {
                       "type": "boolean"
                     },
+                    "razorpay_customer_id": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -24874,6 +24886,9 @@
                         },
                         "is_subscribed": {
                           "type": "boolean"
+                        },
+                        "razorpay_customer_id": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -29635,6 +29650,9 @@
                     "is_subscribed": {
                       "type": "boolean"
                     },
+                    "razorpay_customer_id": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -33494,6 +33512,9 @@
                         },
                         "is_subscribed": {
                           "type": "boolean"
+                        },
+                        "razorpay_customer_id": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -37359,6 +37380,9 @@
                             "is_subscribed": {
                               "type": "boolean"
                             },
+                            "razorpay_customer_id": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -39416,6 +39440,15 @@
               "plan_id": {
                 "type": "string"
               },
+              "razorpay_sub_id": {
+                "type": "string"
+              },
+              "razorpay_plan_id": {
+                "type": "string"
+              },
+              "razorpay_customer_id": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -39493,6 +39526,15 @@
             "format": "date-time"
           },
           "plan_id": {
+            "type": "string"
+          },
+          "razorpay_sub_id": {
+            "type": "string"
+          },
+          "razorpay_plan_id": {
+            "type": "string"
+          },
+          "razorpay_customer_id": {
             "type": "string"
           },
           "createdAt": {
@@ -39807,6 +39849,15 @@
                   "format": "date-time"
                 },
                 "plan_id": {
+                  "type": "string"
+                },
+                "razorpay_sub_id": {
+                  "type": "string"
+                },
+                "razorpay_plan_id": {
+                  "type": "string"
+                },
+                "razorpay_customer_id": {
                   "type": "string"
                 },
                 "createdAt": {

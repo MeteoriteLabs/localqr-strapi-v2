@@ -22,6 +22,15 @@
     },
     "plan_id": {
       "type": "string"
+    },
+    "razorpay_sub_id": {
+      "type": "string"
+    },
+    "razorpay_plan_id": {
+      "type": "string"
+    },
+    "razorpay_customer_id": {
+      "type": "string"
     }
   }
 }

@@ -87,6 +87,9 @@
     "is_subscribed": {
       "type": "boolean",
       "default": false
+    },
+    "razorpay_customer_id": {
+      "type": "string"
     }
   }
 }
