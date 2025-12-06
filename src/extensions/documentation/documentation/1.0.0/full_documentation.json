@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-26T20:41:36.043Z"
+    "x-generation-date": "2025-12-05T11:55:01.152Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14095,6 +14095,9 @@
                             "Guide_Tags": {},
                             "Place_Details": {},
                             "Transportation": {},
+                            "Number_Of_Days": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -17284,6 +17287,9 @@
                     "Guide_Tags": {},
                     "Place_Details": {},
                     "Transportation": {},
+                    "Number_Of_Days": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -20121,6 +20127,9 @@
                     "Guide_Tags": {},
                     "Place_Details": {},
                     "Transportation": {},
+                    "Number_Of_Days": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -21430,6 +21439,9 @@
               "Guide_Tags": {},
               "Place_Details": {},
               "Transportation": {},
+              "Number_Of_Days": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               },
@@ -23777,6 +23789,9 @@
                     "Guide_Tags": {},
                     "Place_Details": {},
                     "Transportation": {},
+                    "Number_Of_Days": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -24185,6 +24200,9 @@
           "Guide_Tags": {},
           "Place_Details": {},
           "Transportation": {},
+          "Number_Of_Days": {
+            "type": "integer"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -26842,6 +26860,9 @@
               "Guide_Tags": {},
               "Place_Details": {},
               "Transportation": {},
+              "Number_Of_Days": {
+                "type": "integer"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -31428,6 +31449,9 @@
                     "Guide_Tags": {},
                     "Place_Details": {},
                     "Transportation": {},
+                    "Number_Of_Days": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -34509,6 +34533,9 @@
                         "Guide_Tags": {},
                         "Place_Details": {},
                         "Transportation": {},
+                        "Number_Of_Days": {
+                          "type": "integer"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -38376,6 +38403,9 @@
                             "Guide_Tags": {},
                             "Place_Details": {},
                             "Transportation": {},
+                            "Number_Of_Days": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
