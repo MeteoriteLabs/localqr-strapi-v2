@@ -73,6 +73,12 @@
     },
     "Number_Of_Days": {
       "type": "integer"
+    },
+    "Category": {
+      "type": "json"
+    },
+    "Best_Time_To_Visit": {
+      "type": "json"
     }
   }
 }

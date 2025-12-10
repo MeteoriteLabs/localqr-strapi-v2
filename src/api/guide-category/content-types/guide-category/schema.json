@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guide_categories",
+  "info": {
+    "singularName": "guide-category",
+    "pluralName": "guide-categories",
+    "displayName": "Guide_Category"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Category_Name": {
+      "type": "string"
+    }
+  }
+}

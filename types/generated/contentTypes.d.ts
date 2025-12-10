@@ -688,6 +688,35 @@ export interface ApiFollowerFollower extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGuideCategoryGuideCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'guide_categories';
+  info: {
+    displayName: 'Guide_Category';
+    pluralName: 'guide-categories';
+    singularName: 'guide-category';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    Category_Name: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::guide-category.guide-category'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGuideSectionGuideSection
   extends Struct.CollectionTypeSchema {
   collectionName: 'guide_sections';
@@ -747,6 +776,8 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
+    Best_Time_To_Visit: Schema.Attribute.JSON;
+    Category: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1795,6 +1826,7 @@ declare module '@strapi/strapi' {
       'api::community.community': ApiCommunityCommunity;
       'api::faq.faq': ApiFaqFaq;
       'api::follower.follower': ApiFollowerFollower;
+      'api::guide-category.guide-category': ApiGuideCategoryGuideCategory;
       'api::guide-section.guide-section': ApiGuideSectionGuideSection;
       'api::guide.guide': ApiGuideGuide;
       'api::platform-term.platform-term': ApiPlatformTermPlatformTerm;
