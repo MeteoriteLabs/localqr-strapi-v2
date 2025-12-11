@@ -777,6 +777,9 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
     Best_Time_To_Visit: Schema.Attribute.JSON;
+    Budget_Type: Schema.Attribute.Enumeration<
+      ['Budget', 'Mid-Range', 'Luxury', 'Backpacker', 'Ultra-Luxury']
+    >;
     Category: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -794,6 +797,7 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     >;
     Guide_Tags: Schema.Attribute.JSON;
     Guide_Type: Schema.Attribute.Enumeration<['Itinerary', 'Theme']>;
+    is_Multicity: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'> &
       Schema.Attribute.Private;

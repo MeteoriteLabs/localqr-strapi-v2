@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-09T17:10:31.183Z"
+    "x-generation-date": "2025-12-10T15:02:53.906Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14606,6 +14606,19 @@
                             },
                             "Category": {},
                             "Best_Time_To_Visit": {},
+                            "Budget_Type": {
+                              "type": "string",
+                              "enum": [
+                                "Budget",
+                                "Mid-Range",
+                                "Luxury",
+                                "Backpacker",
+                                "Ultra-Luxury"
+                              ]
+                            },
+                            "is_Multicity": {
+                              "type": "boolean"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -17800,6 +17813,19 @@
                     },
                     "Category": {},
                     "Best_Time_To_Visit": {},
+                    "Budget_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Budget",
+                        "Mid-Range",
+                        "Luxury",
+                        "Backpacker",
+                        "Ultra-Luxury"
+                      ]
+                    },
+                    "is_Multicity": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -20642,6 +20668,19 @@
                     },
                     "Category": {},
                     "Best_Time_To_Visit": {},
+                    "Budget_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Budget",
+                        "Mid-Range",
+                        "Luxury",
+                        "Backpacker",
+                        "Ultra-Luxury"
+                      ]
+                    },
+                    "is_Multicity": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -21956,6 +21995,19 @@
               },
               "Category": {},
               "Best_Time_To_Visit": {},
+              "Budget_Type": {
+                "type": "string",
+                "enum": [
+                  "Budget",
+                  "Mid-Range",
+                  "Luxury",
+                  "Backpacker",
+                  "Ultra-Luxury"
+                ]
+              },
+              "is_Multicity": {
+                "type": "boolean"
+              },
               "locale": {
                 "type": "string"
               },
@@ -24308,6 +24360,19 @@
                     },
                     "Category": {},
                     "Best_Time_To_Visit": {},
+                    "Budget_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Budget",
+                        "Mid-Range",
+                        "Luxury",
+                        "Backpacker",
+                        "Ultra-Luxury"
+                      ]
+                    },
+                    "is_Multicity": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -24721,6 +24786,19 @@
           },
           "Category": {},
           "Best_Time_To_Visit": {},
+          "Budget_Type": {
+            "type": "string",
+            "enum": [
+              "Budget",
+              "Mid-Range",
+              "Luxury",
+              "Backpacker",
+              "Ultra-Luxury"
+            ]
+          },
+          "is_Multicity": {
+            "type": "boolean"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -27833,6 +27911,19 @@
               },
               "Category": {},
               "Best_Time_To_Visit": {},
+              "Budget_Type": {
+                "type": "string",
+                "enum": [
+                  "Budget",
+                  "Mid-Range",
+                  "Luxury",
+                  "Backpacker",
+                  "Ultra-Luxury"
+                ]
+              },
+              "is_Multicity": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -32424,6 +32515,19 @@
                     },
                     "Category": {},
                     "Best_Time_To_Visit": {},
+                    "Budget_Type": {
+                      "type": "string",
+                      "enum": [
+                        "Budget",
+                        "Mid-Range",
+                        "Luxury",
+                        "Backpacker",
+                        "Ultra-Luxury"
+                      ]
+                    },
+                    "is_Multicity": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -35510,6 +35614,19 @@
                         },
                         "Category": {},
                         "Best_Time_To_Visit": {},
+                        "Budget_Type": {
+                          "type": "string",
+                          "enum": [
+                            "Budget",
+                            "Mid-Range",
+                            "Luxury",
+                            "Backpacker",
+                            "Ultra-Luxury"
+                          ]
+                        },
+                        "is_Multicity": {
+                          "type": "boolean"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -39382,6 +39499,19 @@
                             },
                             "Category": {},
                             "Best_Time_To_Visit": {},
+                            "Budget_Type": {
+                              "type": "string",
+                              "enum": [
+                                "Budget",
+                                "Mid-Range",
+                                "Luxury",
+                                "Backpacker",
+                                "Ultra-Luxury"
+                              ]
+                            },
+                            "is_Multicity": {
+                              "type": "boolean"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"

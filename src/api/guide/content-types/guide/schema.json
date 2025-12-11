@@ -79,6 +79,20 @@
     },
     "Best_Time_To_Visit": {
       "type": "json"
+    },
+    "Budget_Type": {
+      "type": "enumeration",
+      "enum": [
+        "Budget",
+        "Mid-Range",
+        "Luxury",
+        "Backpacker",
+        "Ultra-Luxury"
+      ]
+    },
+    "is_Multicity": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
