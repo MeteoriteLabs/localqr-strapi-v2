@@ -234,6 +234,14 @@
     },
     "localtunes_public": {
       "type": "string"
+    },
+    "public_guides": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
     }
   }
 }

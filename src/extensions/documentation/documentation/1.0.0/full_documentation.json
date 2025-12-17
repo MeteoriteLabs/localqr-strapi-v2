@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-10T15:02:53.906Z"
+    "x-generation-date": "2025-12-16T12:42:24.875Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12310,6 +12310,13 @@
               "localtunes_public": {
                 "type": "string"
               },
+              "public_guides": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "locale": {
                 "type": "string"
               },
@@ -14813,6 +14820,13 @@
                       "localtunes_public": {
                         "type": "string"
                       },
+                      "public_guides": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -15323,6 +15337,13 @@
           },
           "localtunes_public": {
             "type": "string"
+          },
+          "public_guides": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ]
           },
           "createdAt": {
             "type": "string",
@@ -18019,6 +18040,13 @@
               },
               "localtunes_public": {
                 "type": "string"
+              },
+              "public_guides": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
               },
               "createdAt": {
                 "type": "string",
@@ -20874,6 +20902,13 @@
               },
               "localtunes_public": {
                 "type": "string"
+              },
+              "public_guides": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
               },
               "createdAt": {
                 "type": "string",
@@ -24567,6 +24602,13 @@
               "localtunes_public": {
                 "type": "string"
               },
+              "public_guides": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -27480,6 +27522,13 @@
                   },
                   "localtunes_public": {
                     "type": "string"
+                  },
+                  "public_guides": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
                   },
                   "createdAt": {
                     "type": "string",
@@ -32722,6 +32771,13 @@
               "localtunes_public": {
                 "type": "string"
               },
+              "public_guides": {
+                "type": "string",
+                "enum": [
+                  "Yes",
+                  "No"
+                ]
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -35820,6 +35876,13 @@
                   },
                   "localtunes_public": {
                     "type": "string"
+                  },
+                  "public_guides": {
+                    "type": "string",
+                    "enum": [
+                      "Yes",
+                      "No"
+                    ]
                   },
                   "createdAt": {
                     "type": "string",
@@ -39705,6 +39768,13 @@
                       },
                       "localtunes_public": {
                         "type": "string"
+                      },
+                      "public_guides": {
+                        "type": "string",
+                        "enum": [
+                          "Yes",
+                          "No"
+                        ]
                       },
                       "createdAt": {
                         "type": "string",

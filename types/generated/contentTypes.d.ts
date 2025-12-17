@@ -492,6 +492,8 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    public_guides: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.DefaultTo<'Yes'>;
     public_music: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.DefaultTo<'Yes'>;
     public_profile: Schema.Attribute.Enumeration<['Yes', 'No']> &
