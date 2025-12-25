@@ -38,6 +38,9 @@
     },
     "max_devices": {
       "type": "integer"
+    },
+    "ai_guide_quota": {
+      "type": "string"
     }
   }
 }

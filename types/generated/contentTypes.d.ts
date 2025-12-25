@@ -1113,6 +1113,7 @@ export interface ApiRecommendedPlaceRecommendedPlace
 export interface ApiSongLimitSongLimit extends Struct.CollectionTypeSchema {
   collectionName: 'song_limits';
   info: {
+    description: '';
     displayName: 'Song_limit';
     pluralName: 'song-limits';
     singularName: 'song-limit';
@@ -1121,6 +1122,7 @@ export interface ApiSongLimitSongLimit extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    ai_guide_requests: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1152,6 +1154,7 @@ export interface ApiSubscriptionPlanBaseSubscriptionPlanBase
     draftAndPublish: true;
   };
   attributes: {
+    ai_guide_quota: Schema.Attribute.String;
     cost: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

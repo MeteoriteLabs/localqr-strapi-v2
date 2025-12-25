@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-12-16T12:42:24.875Z"
+    "x-generation-date": "2025-12-24T04:47:20.957Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -36463,6 +36463,9 @@
               "song_requests": {
                 "type": "integer"
               },
+              "ai_guide_requests": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               },
@@ -36532,6 +36535,9 @@
             "type": "string"
           },
           "song_requests": {
+            "type": "integer"
+          },
+          "ai_guide_requests": {
             "type": "integer"
           },
           "createdAt": {
@@ -36840,6 +36846,9 @@
                 "song_requests": {
                   "type": "integer"
                 },
+                "ai_guide_requests": {
+                  "type": "integer"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -36940,6 +36949,9 @@
               "max_devices": {
                 "type": "integer"
               },
+              "ai_guide_quota": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -37028,6 +37040,9 @@
           "feature_control": {},
           "max_devices": {
             "type": "integer"
+          },
+          "ai_guide_quota": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -37352,6 +37367,9 @@
                 "feature_control": {},
                 "max_devices": {
                   "type": "integer"
+                },
+                "ai_guide_quota": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",

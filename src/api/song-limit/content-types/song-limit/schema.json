@@ -4,7 +4,8 @@
   "info": {
     "singularName": "song-limit",
     "pluralName": "song-limits",
-    "displayName": "Song_limit"
+    "displayName": "Song_limit",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +15,9 @@
       "type": "string"
     },
     "song_requests": {
+      "type": "integer"
+    },
+    "ai_guide_requests": {
       "type": "integer"
     }
   }
