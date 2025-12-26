@@ -18,7 +18,8 @@
       "type": "integer"
     },
     "ai_guide_requests": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     }
   }
 }

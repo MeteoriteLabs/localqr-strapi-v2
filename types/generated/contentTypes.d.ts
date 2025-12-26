@@ -1122,7 +1122,7 @@ export interface ApiSongLimitSongLimit extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    ai_guide_requests: Schema.Attribute.Integer;
+    ai_guide_requests: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
