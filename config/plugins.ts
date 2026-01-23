@@ -1,15 +1,13 @@
 module.exports = ({ env }) => ({
  email: {
     config: {
-      provider: 'amazon-ses',
+      provider: 'strapi-provider-email-resend',
       providerOptions: {
-        key: env('AWS_SES_KEY'),
-        secret: env('AWS_SES_SECRET'),
-        amazon: 'https://email.ap-south-1.amazonaws.com',
+        apiKey: env('RESEND_API_KEY'),
       },
       settings: {
-        defaultFrom: 'no-reply@localqr.earth',
-        defaultReplyTo: 'support@localqr.earth',
+        defaultFrom: 'no-reply@explorers.earth',
+        defaultReplyTo: 'support@explorers.earth',
       }
    }
  },
