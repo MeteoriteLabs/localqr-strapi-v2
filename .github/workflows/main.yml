@@ -81,7 +81,7 @@ jobs:
         script: |
           set -e
           sudo docker system prune -af
-          cd
+          cd /home/ubuntu
           echo "Loading docker image"
           sudo docker load -i localqr-strapi.tar
 
