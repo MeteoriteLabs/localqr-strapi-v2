@@ -63,8 +63,9 @@ jobs:
       uses: appleboy/scp-action@v1
       with:
         host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
+        username: root
         key: ${{ secrets.EC2_SSH_KEY }}
+        passphrase: ${{ secrets.DEPLOY_PASSPHRASE }}
         port: ${{ secrets.EC2_PORT }}
         source: "localqr-strapi.tar,.env"
         target: /home/ubuntu
@@ -73,13 +74,14 @@ jobs:
       uses: appleboy/ssh-action@v1
       with:
         host: ${{ secrets.EC2_HOST }}
-        username: ${{ secrets.EC2_USER }}
+        username: root
         key: ${{ secrets.EC2_SSH_KEY }}
+        passphrase: ${{ secrets.DEPLOY_PASSPHRASE }}
         port: ${{ secrets.EC2_PORT }}
         script: |
           set -e
           sudo docker system prune -af
-          cd /home/ubuntu
+          cd
           echo "Loading docker image"
           sudo docker load -i localqr-strapi.tar
 
