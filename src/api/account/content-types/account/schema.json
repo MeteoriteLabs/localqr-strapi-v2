@@ -242,6 +242,12 @@
         "No"
       ],
       "default": "Yes"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::instagram-media.instagram-media",
+      "mappedBy": "owner"
     }
   }
 }

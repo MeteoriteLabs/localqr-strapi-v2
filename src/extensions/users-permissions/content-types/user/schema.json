@@ -90,6 +90,18 @@
     },
     "razorpay_customer_id": {
       "type": "string"
+    },
+    "instagramUserId": {
+      "type": "string"
+    },
+    "instagramUsername": {
+      "type": "string"
+    },
+    "instagramAccountType": {
+      "type": "string"
+    },
+    "instagramAccessToken": {
+      "type": "text"
     }
   }
 }

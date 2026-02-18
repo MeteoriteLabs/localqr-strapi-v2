@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people_categories",
+  "info": {
+    "singularName": "people-category",
+    "pluralName": "people-categories",
+    "displayName": "People_Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Category_name": {
+      "type": "string"
+    }
+  }
+}

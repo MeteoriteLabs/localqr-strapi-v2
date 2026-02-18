@@ -520,6 +520,10 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::instagram-media.instagram-media'
+    >;
     username: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -814,6 +818,77 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Visibility: Schema.Attribute.Boolean;
+  };
+}
+
+export interface ApiInstagramMediaInstagramMedia
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'instagram_medias';
+  info: {
+    displayName: 'Instagram-media';
+    pluralName: 'instagram-medias';
+    singularName: 'instagram-media';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    caption: Schema.Attribute.Text;
+    commentCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    likeCount: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::instagram-media.instagram-media'
+    > &
+      Schema.Attribute.Private;
+    mediaId: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    mediaType: Schema.Attribute.Enumeration<
+      ['IMAGE', 'VIDEO', 'CAROUSEL_ALBUM']
+    >;
+    mediaUrl: Schema.Attribute.Text & Schema.Attribute.Required;
+    owner: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
+    permalink: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    thumbnailUrl: Schema.Attribute.Text;
+    timestamp: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPeopleCategoryPeopleCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'people_categories';
+  info: {
+    displayName: 'People_Category';
+    pluralName: 'people-categories';
+    singularName: 'people-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Category_name: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::people-category.people-category'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1784,6 +1859,10 @@ export interface PluginUsersPermissionsUser
       Schema.Attribute.SetMinMaxLength<{
         minLength: 6;
       }>;
+    instagramAccessToken: Schema.Attribute.Text;
+    instagramAccountType: Schema.Attribute.String;
+    instagramUserId: Schema.Attribute.String;
+    instagramUsername: Schema.Attribute.String;
     is_subscribed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     Language_Choice: Schema.Attribute.String & Schema.Attribute.DefaultTo<'en'>;
     Language_preference: Schema.Attribute.String;
@@ -1838,6 +1917,8 @@ declare module '@strapi/strapi' {
       'api::guide-category.guide-category': ApiGuideCategoryGuideCategory;
       'api::guide-section.guide-section': ApiGuideSectionGuideSection;
       'api::guide.guide': ApiGuideGuide;
+      'api::instagram-media.instagram-media': ApiInstagramMediaInstagramMedia;
+      'api::people-category.people-category': ApiPeopleCategoryPeopleCategory;
       'api::platform-term.platform-term': ApiPlatformTermPlatformTerm;
       'api::public-page-analytic.public-page-analytic': ApiPublicPageAnalyticPublicPageAnalytic;
       'api::reason-for-leaving.reason-for-leaving': ApiReasonForLeavingReasonForLeaving;
