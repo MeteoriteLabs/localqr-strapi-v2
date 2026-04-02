@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movie_categories",
+  "info": {
+    "singularName": "movie-category",
+    "pluralName": "movie-categories",
+    "displayName": "Movie_Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "genre_name": {
+      "type": "string",
+      "required": true
+    },
+    "recommended_movie": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recommended-movie.recommended-movie",
+      "inversedBy": "movie_categories"
+    }
+  }
+}

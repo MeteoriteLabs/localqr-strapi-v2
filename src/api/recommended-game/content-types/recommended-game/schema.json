@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_games",
+  "info": {
+    "singularName": "recommended-game",
+    "pluralName": "recommended-games",
+    "displayName": "RecommendedGame",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "igdb_id": {
+      "type": "integer",
+      "required": true
+    },
+    "igdb_slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "igdb_image_id": {
+      "type": "string"
+    },
+    "cover_url": {
+      "type": "string"
+    },
+    "cover_url_large": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "release_date": {
+      "type": "string"
+    },
+    "release_year": {
+      "type": "string"
+    },
+    "igdb_rating": {
+      "type": "decimal"
+    },
+    "igdb_rating_count": {
+      "type": "integer"
+    },
+    "genres": {
+      "type": "json"
+    },
+    "platforms": {
+      "type": "json"
+    },
+    "developer": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "game_modes": {
+      "type": "json"
+    },
+    "screenshot_ids": {
+      "type": "json"
+    },
+    "igdb_url": {
+      "type": "string"
+    },
+    "user_recommendation_note": {
+      "type": "blocks"
+    },
+    "user_rating": {
+      "type": "integer"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media_details": {
+      "type": "json"
+    },
+    "game_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::game-list.game-list",
+      "inversedBy": "recommended_games"
+    },
+    "game_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::game-category.game-category",
+      "mappedBy": "recommended_games"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "book_categories",
+  "info": {
+    "singularName": "book-category",
+    "pluralName": "book-categories",
+    "displayName": "Book_Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subject_name": {
+      "type": "string",
+      "required": true
+    },
+    "recommended_books": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::recommended-book.recommended-book",
+      "inversedBy": "book_categories"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

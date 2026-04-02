@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movie_lists",
+  "info": {
+    "singularName": "movie-list",
+    "pluralName": "movie-lists",
+    "displayName": "MovieList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "List_Name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "list_description": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "List_Name",
+      "required": true
+    },
+    "Visibility": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "pluginOptions": {}
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "display_order": {
+      "type": "integer",
+      "default": 0,
+      "pluginOptions": {}
+    },
+    "top_picks_heading": {
+      "type": "string",
+      "default": "Top Picks",
+      "pluginOptions": {}
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "movie_lists"
+    },
+    "recommended_movies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommended-movie.recommended-movie",
+      "mappedBy": "movie_list"
+    }
+  }
+}

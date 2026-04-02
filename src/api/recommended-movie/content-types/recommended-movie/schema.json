@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_movies",
+  "info": {
+    "singularName": "recommended-movie",
+    "pluralName": "recommended-movies",
+    "displayName": "RecommendedMovie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tmdb_id": {
+      "type": "string",
+      "required": true
+    },
+    "media_type": {
+      "type": "enumeration",
+      "enum": [
+        "Movie",
+        "Show",
+        "TV"
+      ],
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "original_title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "poster_path": {
+      "type": "string"
+    },
+    "backdrop_path": {
+      "type": "string"
+    },
+    "genres": {
+      "type": "json"
+    },
+    "director": {
+      "type": "string"
+    },
+    "runtime": {
+      "type": "integer"
+    },
+    "tmdb_rating": {
+      "type": "decimal"
+    },
+    "overview": {
+      "type": "text"
+    },
+    "season_count": {
+      "type": "integer"
+    },
+    "user_recommendation_note": {
+      "type": "blocks"
+    },
+    "watch_providers": {
+      "type": "json"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer"
+    },
+    "media_details": {
+      "type": "json"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "movie_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::movie-list.movie-list",
+      "inversedBy": "recommended_movies"
+    },
+    "movie_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movie-category.movie-category",
+      "mappedBy": "recommended_movie"
+    },
+    "cast_details": {
+      "type": "json"
+    },
+    "user_rating": {
+      "type": "integer"
+    }
+  }
+}

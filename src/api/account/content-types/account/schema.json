@@ -243,11 +243,50 @@
       ],
       "default": "Yes"
     },
-    "user": {
+    "movie_lists": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::instagram-media.instagram-media",
-      "mappedBy": "owner"
+      "target": "api::movie-list.movie-list",
+      "mappedBy": "account"
+    },
+    "public_movie": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
+    },
+    "book_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::book-list.book-list",
+      "mappedBy": "account"
+    },
+    "public_books": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
+    },
+    "game_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::game-list.game-list",
+      "mappedBy": "account"
+    },
+    "public_games": {
+      "type": "enumeration",
+      "enum": [
+        "Yes",
+        "No"
+      ],
+      "default": "Yes"
+    },
+    "pinned_nav_tabs": {
+      "type": "json"
     }
   }
 }

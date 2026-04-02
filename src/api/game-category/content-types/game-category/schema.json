@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_categories",
+  "info": {
+    "singularName": "game-category",
+    "pluralName": "game-categories",
+    "displayName": "Game_Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "genre_name": {
+      "type": "string",
+      "required": true
+    },
+    "igdb_genre_id": {
+      "type": "integer"
+    },
+    "recommended_games": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::recommended-game.recommended-game",
+      "inversedBy": "game_categories"
+    }
+  }
+}

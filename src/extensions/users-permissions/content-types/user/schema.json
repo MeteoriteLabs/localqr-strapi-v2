@@ -102,6 +102,12 @@
     },
     "instagramAccessToken": {
       "type": "text"
+    },
+    "movie_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movie-list.movie-list",
+      "mappedBy": "account"
     }
   }
 }

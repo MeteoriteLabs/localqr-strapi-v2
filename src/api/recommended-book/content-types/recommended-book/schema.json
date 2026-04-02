@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_books",
+  "info": {
+    "singularName": "recommended-book",
+    "pluralName": "recommended-books",
+    "displayName": "RecommendedBook",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "volume_id": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "json"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "published_date": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cover_url": {
+      "type": "string"
+    },
+    "cover_url_large": {
+      "type": "string"
+    },
+    "subjects": {
+      "type": "json"
+    },
+    "page_count": {
+      "type": "integer"
+    },
+    "isbn_13": {
+      "type": "string"
+    },
+    "isbn_10": {
+      "type": "string"
+    },
+    "google_rating": {
+      "type": "decimal"
+    },
+    "ratings_count": {
+      "type": "integer"
+    },
+    "language": {
+      "type": "string"
+    },
+    "preview_link": {
+      "type": "string"
+    },
+    "user_recommendation_note": {
+      "type": "blocks"
+    },
+    "user_rating": {
+      "type": "integer"
+    },
+    "buy_links": {
+      "type": "json"
+    },
+    "is_pinned": {
+      "type": "boolean"
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer"
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media_details": {
+      "type": "json"
+    },
+    "book_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::book-list.book-list",
+      "inversedBy": "recommended_books"
+    },
+    "book_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book-category.book-category",
+      "mappedBy": "recommended_books"
+    }
+  }
+}

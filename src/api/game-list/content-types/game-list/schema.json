@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_lists",
+  "info": {
+    "singularName": "game-list",
+    "pluralName": "game-lists",
+    "displayName": "GameList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "List_Name": {
+      "type": "string",
+      "required": true
+    },
+    "list_description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "Visibility": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "cover_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "display_order": {
+      "type": "integer"
+    },
+    "top_picks_heading": {
+      "type": "string"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "game_lists"
+    },
+    "recommended_games": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommended-game.recommended-game",
+      "mappedBy": "game_list"
+    }
+  }
+}
