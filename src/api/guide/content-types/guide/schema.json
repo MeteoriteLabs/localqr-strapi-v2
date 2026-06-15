@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "Title": {
       "type": "string"
@@ -93,6 +94,15 @@
     "is_Multicity": {
       "type": "boolean",
       "default": false
+    },
+    "is_pinned": {
+      "type": "boolean"
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer"
     }
   }
 }

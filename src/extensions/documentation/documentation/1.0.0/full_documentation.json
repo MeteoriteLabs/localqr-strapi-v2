@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-26T14:28:03.293Z"
+    "x-generation-date": "2026-06-14T17:17:48.947Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -19622,6 +19622,15 @@
                                 }
                               }
                             },
+                            "is_pinned": {
+                              "type": "boolean"
+                            },
+                            "pin_order": {
+                              "type": "integer"
+                            },
+                            "display_order": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -20554,6 +20563,15 @@
                             },
                             "is_Multicity": {
                               "type": "boolean"
+                            },
+                            "is_pinned": {
+                              "type": "boolean"
+                            },
+                            "pin_order": {
+                              "type": "integer"
+                            },
+                            "display_order": {
+                              "type": "integer"
                             },
                             "createdAt": {
                               "type": "string",
@@ -27551,6 +27569,15 @@
                                   }
                                 }
                               },
+                              "is_pinned": {
+                                "type": "boolean"
+                              },
+                              "pin_order": {
+                                "type": "integer"
+                              },
+                              "display_order": {
+                                "type": "integer"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -28483,6 +28510,15 @@
                               },
                               "is_Multicity": {
                                 "type": "boolean"
+                              },
+                              "is_pinned": {
+                                "type": "boolean"
+                              },
+                              "pin_order": {
+                                "type": "integer"
+                              },
+                              "display_order": {
+                                "type": "integer"
                               },
                               "createdAt": {
                                 "type": "string",
@@ -33310,6 +33346,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -34242,6 +34287,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -39367,6 +39421,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -40299,6 +40362,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -45552,6 +45624,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -46484,6 +46565,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -53215,6 +53305,15 @@
                                   }
                                 }
                               },
+                              "is_pinned": {
+                                "type": "boolean"
+                              },
+                              "pin_order": {
+                                "type": "integer"
+                              },
+                              "display_order": {
+                                "type": "integer"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -54147,6 +54246,15 @@
                               },
                               "is_Multicity": {
                                 "type": "boolean"
+                              },
+                              "is_pinned": {
+                                "type": "boolean"
+                              },
+                              "pin_order": {
+                                "type": "integer"
+                              },
+                              "display_order": {
+                                "type": "integer"
                               },
                               "createdAt": {
                                 "type": "string",
@@ -58976,6 +59084,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -59908,6 +60025,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -62018,6 +62144,15 @@
               },
               "is_Multicity": {
                 "type": "boolean"
+              },
+              "is_pinned": {
+                "type": "boolean"
+              },
+              "pin_order": {
+                "type": "integer"
+              },
+              "display_order": {
+                "type": "integer"
               },
               "locale": {
                 "type": "string"
@@ -65049,6 +65184,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -65981,6 +66125,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -68125,6 +68278,15 @@
           },
           "is_Multicity": {
             "type": "boolean"
+          },
+          "is_pinned": {
+            "type": "boolean"
+          },
+          "pin_order": {
+            "type": "integer"
+          },
+          "display_order": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -71907,6 +72069,15 @@
                             }
                           }
                         },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -74656,6 +74827,15 @@
               },
               "is_Multicity": {
                 "type": "boolean"
+              },
+              "is_pinned": {
+                "type": "boolean"
+              },
+              "pin_order": {
+                "type": "integer"
+              },
+              "display_order": {
+                "type": "integer"
               },
               "createdAt": {
                 "type": "string",
@@ -77766,6 +77946,15 @@
                                 }
                               }
                             },
+                            "is_pinned": {
+                              "type": "boolean"
+                            },
+                            "pin_order": {
+                              "type": "integer"
+                            },
+                            "display_order": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -78698,6 +78887,15 @@
                             },
                             "is_Multicity": {
                               "type": "boolean"
+                            },
+                            "is_pinned": {
+                              "type": "boolean"
+                            },
+                            "pin_order": {
+                              "type": "integer"
+                            },
+                            "display_order": {
+                              "type": "integer"
                             },
                             "createdAt": {
                               "type": "string",
@@ -84271,6 +84469,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -85203,6 +85410,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -90398,6 +90614,15 @@
                   "example": "string or id"
                 }
               },
+              "is_pinned": {
+                "type": "boolean"
+              },
+              "pin_order": {
+                "type": "integer"
+              },
+              "display_order": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               },
@@ -93429,6 +93654,15 @@
                         }
                       }
                     },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -94361,6 +94595,15 @@
                     },
                     "is_Multicity": {
                       "type": "boolean"
+                    },
+                    "is_pinned": {
+                      "type": "boolean"
+                    },
+                    "pin_order": {
+                      "type": "integer"
+                    },
+                    "display_order": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -96304,6 +96547,15 @@
                 }
               }
             }
+          },
+          "is_pinned": {
+            "type": "boolean"
+          },
+          "pin_order": {
+            "type": "integer"
+          },
+          "display_order": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -100714,6 +100966,15 @@
                             }
                           }
                         },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -101646,6 +101907,15 @@
                         },
                         "is_Multicity": {
                           "type": "boolean"
+                        },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
                         },
                         "createdAt": {
                           "type": "string",
@@ -107043,6 +107313,15 @@
                             }
                           }
                         },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -107975,6 +108254,15 @@
                         },
                         "is_Multicity": {
                           "type": "boolean"
+                        },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
                         },
                         "createdAt": {
                           "type": "string",
@@ -112627,6 +112915,15 @@
                             }
                           }
                         },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -113559,6 +113856,15 @@
                         },
                         "is_Multicity": {
                           "type": "boolean"
+                        },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
                         },
                         "createdAt": {
                           "type": "string",
@@ -119827,6 +120133,15 @@
                         "is_Multicity": {
                           "type": "boolean"
                         },
+                        "is_pinned": {
+                          "type": "boolean"
+                        },
+                        "pin_order": {
+                          "type": "integer"
+                        },
+                        "display_order": {
+                          "type": "integer"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -122236,6 +122551,15 @@
                     }
                   }
                 }
+              },
+              "is_pinned": {
+                "type": "boolean"
+              },
+              "pin_order": {
+                "type": "integer"
+              },
+              "display_order": {
+                "type": "integer"
               },
               "createdAt": {
                 "type": "string",
@@ -127368,6 +127692,15 @@
                             "is_Multicity": {
                               "type": "boolean"
                             },
+                            "is_pinned": {
+                              "type": "boolean"
+                            },
+                            "pin_order": {
+                              "type": "integer"
+                            },
+                            "display_order": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -129310,6 +129643,15 @@
                         }
                       }
                     }
+                  },
+                  "is_pinned": {
+                    "type": "boolean"
+                  },
+                  "pin_order": {
+                    "type": "integer"
+                  },
+                  "display_order": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",

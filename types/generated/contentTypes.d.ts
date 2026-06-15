@@ -1023,6 +1023,7 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Description: Schema.Attribute.Blocks;
+    display_order: Schema.Attribute.Integer;
     Estimated_Budget: Schema.Attribute.JSON;
     Guide_Media: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -1036,10 +1037,12 @@ export interface ApiGuideGuide extends Struct.CollectionTypeSchema {
     Guide_Tags: Schema.Attribute.JSON;
     Guide_Type: Schema.Attribute.Enumeration<['Itinerary', 'Theme']>;
     is_Multicity: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    is_pinned: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::guide.guide'> &
       Schema.Attribute.Private;
     Number_Of_Days: Schema.Attribute.Integer;
+    pin_order: Schema.Attribute.Integer;
     Place_Details: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.String;
@@ -1332,7 +1335,9 @@ export interface ApiRecommendationListRecommendationList
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    display_order: Schema.Attribute.Integer;
     Instagram_Media_URL: Schema.Attribute.String;
+    is_pinned: Schema.Attribute.Boolean;
     List_Name: Schema.Attribute.String;
     List_Name_Details: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1341,6 +1346,7 @@ export interface ApiRecommendationListRecommendationList
       'api::recommendation-list.recommendation-list'
     > &
       Schema.Attribute.Private;
+    pin_order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     recommended_places: Schema.Attribute.Relation<
       'oneToMany',

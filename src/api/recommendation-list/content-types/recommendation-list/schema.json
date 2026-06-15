@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "slug": {
       "type": "string"
@@ -40,6 +41,15 @@
       "relation": "oneToMany",
       "target": "api::recommended-place.recommended-place",
       "mappedBy": "recommendation_list"
+    },
+    "is_pinned": {
+      "type": "boolean"
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer"
     }
   }
 }
