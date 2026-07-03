@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_lists",
+  "info": {
+    "singularName": "app-list",
+    "pluralName": "app-lists",
+    "displayName": "AppList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "List_Name": {
+      "type": "string",
+      "required": true
+    },
+    "list_description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "Visibility": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "display_order": {
+      "type": "integer",
+      "default": 0
+    },
+    "top_apps_heading": {
+      "type": "string"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "app_lists"
+    },
+    "recommended_apps": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommended-app.recommended-app",
+      "mappedBy": "app_list"
+    }
+  }
+}

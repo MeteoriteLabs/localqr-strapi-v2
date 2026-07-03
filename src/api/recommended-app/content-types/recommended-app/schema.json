@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_apps",
+  "info": {
+    "singularName": "recommended-app",
+    "pluralName": "recommended-apps",
+    "displayName": "RecommendedApp"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "app_url": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "developer": {
+      "type": "string"
+    },
+    "platforms": {
+      "type": "json"
+    },
+    "price_tier": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Freemium",
+      "enum": [
+        "Free",
+        "Freemium",
+        "Paid",
+        "Subscription"
+      ]
+    },
+    "download_url": {
+      "type": "string"
+    },
+    "user_recommendation_note": {
+      "type": "blocks"
+    },
+    "user_rating": {
+      "type": "integer"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer",
+      "default": 0
+    },
+    "screenshots": {
+      "type": "json"
+    },
+    "app_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::app-list.app-list",
+      "inversedBy": "recommended_apps"
+    },
+    "app_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::app-category.app-category",
+      "inversedBy": "recommended_apps"
+    }
+  }
+}

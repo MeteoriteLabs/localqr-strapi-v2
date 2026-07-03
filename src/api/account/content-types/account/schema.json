@@ -56,42 +56,42 @@
     },
     "Account_Type": {
       "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "enum": [
         "Personal",
         "Creator",
         "Business"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      ]
     },
     "profile_picture": {
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "bg_picture": {
       "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "social_media": {
       "type": "json",
@@ -151,12 +151,12 @@
     },
     "Primary_Address": {
       "type": "json",
-      "required": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "Bio": {
       "type": "richtext",
@@ -201,47 +201,47 @@
     },
     "localtunes_integrated": {
       "type": "enumeration",
+      "required": true,
+      "default": "No",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "No",
-      "required": true
+      ]
     },
     "public_recommendations": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "public_profile": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "public_music": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "localtunes_public": {
       "type": "string"
     },
     "public_guides": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "movie_lists": {
       "type": "relation",
@@ -251,11 +251,11 @@
     },
     "public_movie": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "book_lists": {
       "type": "relation",
@@ -265,11 +265,11 @@
     },
     "public_books": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "game_lists": {
       "type": "relation",
@@ -279,14 +279,52 @@
     },
     "public_games": {
       "type": "enumeration",
+      "default": "Yes",
       "enum": [
         "Yes",
         "No"
-      ],
-      "default": "Yes"
+      ]
     },
     "pinned_nav_tabs": {
       "type": "json"
+    },
+    "app_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app-list.app-list",
+      "mappedBy": "account"
+    },
+    "product_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-list.product-list",
+      "mappedBy": "account"
+    },
+    "public_apps": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "public_products": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No"
+      ]
     }
   }
 }

@@ -471,6 +471,7 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'oneToMany',
       'plugin::users-permissions.user'
     >;
+    app_lists: Schema.Attribute.Relation<'oneToMany', 'api::app-list.app-list'>;
     bg_picture: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -548,6 +549,10 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    product_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-list.product-list'
+    >;
     profile_picture: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -566,6 +571,13 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    public_apps: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'Yes'>;
     public_books: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.DefaultTo<'Yes'>;
     public_games: Schema.Attribute.Enumeration<['Yes', 'No']> &
@@ -575,6 +587,13 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
     public_movie: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.DefaultTo<'Yes'>;
     public_music: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.DefaultTo<'Yes'>;
+    public_products: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
       Schema.Attribute.DefaultTo<'Yes'>;
     public_profile: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.DefaultTo<'Yes'>;
@@ -610,6 +629,82 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'manyToMany',
       'plugin::users-permissions.user'
     >;
+  };
+}
+
+export interface ApiAppCategoryAppCategory extends Struct.CollectionTypeSchema {
+  collectionName: 'app_categories';
+  info: {
+    displayName: 'App_Category';
+    pluralName: 'app-categories';
+    singularName: 'app-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-category.app-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended_apps: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-app.recommended-app'
+    >;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAppListAppList extends Struct.CollectionTypeSchema {
+  collectionName: 'app_lists';
+  info: {
+    displayName: 'AppList';
+    pluralName: 'app-lists';
+    singularName: 'app-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
+    cover_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    list_description: Schema.Attribute.Text;
+    List_Name: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::app-list.app-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended_apps: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-app.recommended-app'
+    >;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    top_apps_heading: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Visibility: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -1213,6 +1308,83 @@ export interface ApiPlatformTermPlatformTerm
   };
 }
 
+export interface ApiProductCategoryProductCategory
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'product_categories';
+  info: {
+    displayName: 'Product_Category';
+    pluralName: 'product-categories';
+    singularName: 'product-category';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-category.product-category'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended_products: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-product.recommended-product'
+    >;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductListProductList extends Struct.CollectionTypeSchema {
+  collectionName: 'product_lists';
+  info: {
+    displayName: 'ProductList';
+    pluralName: 'product-lists';
+    singularName: 'product-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
+    cover_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    list_description: Schema.Attribute.Text;
+    List_Name: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-list.product-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended_products: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-product.recommended-product'
+    >;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    top_products_heading: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Visibility: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface ApiPublicPageAnalyticPublicPageAnalytic
   extends Struct.CollectionTypeSchema {
   collectionName: 'public_page_analytics';
@@ -1391,6 +1563,57 @@ export interface ApiRecommendationSubCategoryRecommendationSubCategory
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiRecommendedAppRecommendedApp
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'recommended_apps';
+  info: {
+    displayName: 'RecommendedApp';
+    pluralName: 'recommended-apps';
+    singularName: 'recommended-app';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    app_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::app-category.app-category'
+    >;
+    app_list: Schema.Attribute.Relation<'manyToOne', 'api::app-list.app-list'>;
+    app_url: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    developer: Schema.Attribute.String;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    download_url: Schema.Attribute.String;
+    is_pinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-app.recommended-app'
+    > &
+      Schema.Attribute.Private;
+    logo_url: Schema.Attribute.String;
+    pin_order: Schema.Attribute.Integer;
+    platforms: Schema.Attribute.JSON;
+    price_tier: Schema.Attribute.Enumeration<
+      ['Free', 'Freemium', 'Paid', 'Subscription']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Freemium'>;
+    publishedAt: Schema.Attribute.DateTime;
+    screenshots: Schema.Attribute.JSON;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_rating: Schema.Attribute.Integer;
+    user_recommendation_note: Schema.Attribute.Blocks;
   };
 }
 
@@ -1649,6 +1872,57 @@ export interface ApiRecommendedPlaceRecommendedPlace
     user_recommendation_note: Schema.Attribute.RichText;
     Users_Place_Note: Schema.Attribute.Blocks;
     Users_Social_URL: Schema.Attribute.String;
+  };
+}
+
+export interface ApiRecommendedProductRecommendedProduct
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'recommended_products';
+  info: {
+    displayName: 'RecommendedProduct';
+    pluralName: 'recommended-products';
+    singularName: 'recommended-product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand: Schema.Attribute.String;
+    buy_url: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    currency: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    images: Schema.Attribute.JSON;
+    is_pinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-product.recommended-product'
+    > &
+      Schema.Attribute.Private;
+    logo_url: Schema.Attribute.String;
+    pin_order: Schema.Attribute.Integer;
+    price: Schema.Attribute.Decimal;
+    product_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::product-category.product-category'
+    >;
+    product_list: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::product-list.product-list'
+    >;
+    product_url: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    specifications: Schema.Attribute.JSON;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_rating: Schema.Attribute.Integer;
+    user_recommendation_note: Schema.Attribute.Blocks;
   };
 }
 
@@ -2383,6 +2657,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::account.account': ApiAccountAccount;
+      'api::app-category.app-category': ApiAppCategoryAppCategory;
+      'api::app-list.app-list': ApiAppListAppList;
       'api::book-category.book-category': ApiBookCategoryBookCategory;
       'api::book-list.book-list': ApiBookListBookList;
       'api::claimable-place-profile.claimable-place-profile': ApiClaimablePlaceProfileClaimablePlaceProfile;
@@ -2398,15 +2674,19 @@ declare module '@strapi/strapi' {
       'api::movie-list.movie-list': ApiMovieListMovieList;
       'api::people-category.people-category': ApiPeopleCategoryPeopleCategory;
       'api::platform-term.platform-term': ApiPlatformTermPlatformTerm;
+      'api::product-category.product-category': ApiProductCategoryProductCategory;
+      'api::product-list.product-list': ApiProductListProductList;
       'api::public-page-analytic.public-page-analytic': ApiPublicPageAnalyticPublicPageAnalytic;
       'api::reason-for-leaving.reason-for-leaving': ApiReasonForLeavingReasonForLeaving;
       'api::recommendation-category.recommendation-category': ApiRecommendationCategoryRecommendationCategory;
       'api::recommendation-list.recommendation-list': ApiRecommendationListRecommendationList;
       'api::recommendation-sub-category.recommendation-sub-category': ApiRecommendationSubCategoryRecommendationSubCategory;
+      'api::recommended-app.recommended-app': ApiRecommendedAppRecommendedApp;
       'api::recommended-book.recommended-book': ApiRecommendedBookRecommendedBook;
       'api::recommended-game.recommended-game': ApiRecommendedGameRecommendedGame;
       'api::recommended-movie.recommended-movie': ApiRecommendedMovieRecommendedMovie;
       'api::recommended-place.recommended-place': ApiRecommendedPlaceRecommendedPlace;
+      'api::recommended-product.recommended-product': ApiRecommendedProductRecommendedProduct;
       'api::song-limit.song-limit': ApiSongLimitSongLimit;
       'api::subscription-plan-base.subscription-plan-base': ApiSubscriptionPlanBaseSubscriptionPlanBase;
       'api::supporter.supporter': ApiSupporterSupporter;
