@@ -9,9 +9,16 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "Category_name": {
       "type": "string"
+    },
+    "recommended_people": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recommended-person.recommended-person",
+      "mappedBy": "people_category"
     }
   }
 }

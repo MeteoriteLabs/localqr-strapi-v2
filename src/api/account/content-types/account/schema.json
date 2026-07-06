@@ -325,6 +325,25 @@
         "Yes",
         "No"
       ]
+    },
+    "person_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::person-list.person-list",
+      "mappedBy": "account"
+    },
+    "public_people": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "Yes",
+      "enum": [
+        "Yes",
+        "No"
+      ]
     }
   }
 }

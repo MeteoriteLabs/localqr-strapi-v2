@@ -537,6 +537,10 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::movie-list.movie-list'
     >;
+    person_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::person-list.person-list'
+    >;
     pinned_nav_tabs: Schema.Attribute.JSON;
     Primary_Address: Schema.Attribute.JSON &
       Schema.Attribute.Required &
@@ -587,6 +591,13 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
     public_movie: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.DefaultTo<'Yes'>;
     public_music: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.DefaultTo<'Yes'>;
+    public_people: Schema.Attribute.Enumeration<['Yes', 'No']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
       Schema.Attribute.DefaultTo<'Yes'>;
     public_products: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.SetPluginOptions<{
@@ -1251,9 +1262,56 @@ export interface ApiPeopleCategoryPeopleCategory
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    recommended_people: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-person.recommended-person'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPersonListPersonList extends Struct.CollectionTypeSchema {
+  collectionName: 'person_lists';
+  info: {
+    displayName: 'PersonList';
+    pluralName: 'person-lists';
+    singularName: 'person-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
+    cover_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    list_description: Schema.Attribute.Text;
+    List_Name: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::person-list.person-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended_people: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-person.recommended-person'
+    >;
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    top_picks_heading: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Visibility: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
   };
 }
 
@@ -1808,6 +1866,71 @@ export interface ApiRecommendedMovieRecommendedMovie
     user_recommendation_note: Schema.Attribute.Blocks;
     watch_providers: Schema.Attribute.JSON;
     year: Schema.Attribute.String;
+  };
+}
+
+export interface ApiRecommendedPersonRecommendedPerson
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'recommended_people';
+  info: {
+    displayName: 'RecommendedPerson';
+    pluralName: 'recommended-people';
+    singularName: 'recommended-person';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    avatar_path: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    display_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    headline: Schema.Attribute.String;
+    is_pinned: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::recommended-person.recommended-person'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    Media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    media_details: Schema.Attribute.JSON;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    people_category: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::people-category.people-category'
+    >;
+    person_list: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::person-list.person-list'
+    >;
+    pin_order: Schema.Attribute.Integer;
+    primary_platform: Schema.Attribute.Enumeration<
+      [
+        'instagram',
+        'linkedin',
+        'twitter',
+        'github',
+        'youtube',
+        'website',
+        'other',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'linkedin'>;
+    publishedAt: Schema.Attribute.DateTime;
+    skills_tags: Schema.Attribute.JSON;
+    social_urls: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    user_rating: Schema.Attribute.Integer;
+    user_recommendation_note: Schema.Attribute.Blocks;
+    username_handle: Schema.Attribute.String;
   };
 }
 
@@ -2673,6 +2796,7 @@ declare module '@strapi/strapi' {
       'api::movie-category.movie-category': ApiMovieCategoryMovieCategory;
       'api::movie-list.movie-list': ApiMovieListMovieList;
       'api::people-category.people-category': ApiPeopleCategoryPeopleCategory;
+      'api::person-list.person-list': ApiPersonListPersonList;
       'api::platform-term.platform-term': ApiPlatformTermPlatformTerm;
       'api::product-category.product-category': ApiProductCategoryProductCategory;
       'api::product-list.product-list': ApiProductListProductList;
@@ -2685,6 +2809,7 @@ declare module '@strapi/strapi' {
       'api::recommended-book.recommended-book': ApiRecommendedBookRecommendedBook;
       'api::recommended-game.recommended-game': ApiRecommendedGameRecommendedGame;
       'api::recommended-movie.recommended-movie': ApiRecommendedMovieRecommendedMovie;
+      'api::recommended-person.recommended-person': ApiRecommendedPersonRecommendedPerson;
       'api::recommended-place.recommended-place': ApiRecommendedPlaceRecommendedPlace;
       'api::recommended-product.recommended-product': ApiRecommendedProductRecommendedProduct;
       'api::song-limit.song-limit': ApiSongLimitSongLimit;

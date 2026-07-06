@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recommended_people",
+  "info": {
+    "singularName": "recommended-person",
+    "pluralName": "recommended-people",
+    "displayName": "RecommendedPerson"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "username_handle": {
+      "type": "string"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "avatar_path": {
+      "type": "string"
+    },
+    "primary_platform": {
+      "type": "enumeration",
+      "default": "linkedin",
+      "enum": [
+        "instagram",
+        "linkedin",
+        "twitter",
+        "github",
+        "youtube",
+        "website",
+        "other"
+      ]
+    },
+    "social_urls": {
+      "type": "json"
+    },
+    "skills_tags": {
+      "type": "json"
+    },
+    "user_recommendation_note": {
+      "type": "blocks"
+    },
+    "user_rating": {
+      "type": "integer"
+    },
+    "is_pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "pin_order": {
+      "type": "integer"
+    },
+    "display_order": {
+      "type": "integer",
+      "default": 0
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "media_details": {
+      "type": "json"
+    },
+    "person_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::person-list.person-list",
+      "inversedBy": "recommended_people"
+    },
+    "people_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::people-category.people-category",
+      "inversedBy": "recommended_people"
+    }
+  }
+}
