@@ -1300,6 +1300,10 @@ export interface ApiPersonListPersonList extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    recommendation_list: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recommendation-list.recommendation-list'
+    >;
     recommended_people: Schema.Attribute.Relation<
       'oneToMany',
       'api::recommended-person.recommended-person'
@@ -1428,6 +1432,10 @@ export interface ApiProductListProductList extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    recommendation_list: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::recommendation-list.recommendation-list'
+    >;
     recommended_products: Schema.Attribute.Relation<
       'oneToMany',
       'api::recommended-product.recommended-product'
@@ -1576,7 +1584,15 @@ export interface ApiRecommendationListRecommendationList
       'api::recommendation-list.recommendation-list'
     > &
       Schema.Attribute.Private;
+    person_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::person-list.person-list'
+    >;
     pin_order: Schema.Attribute.Integer;
+    product_lists: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-list.product-list'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     recommended_places: Schema.Attribute.Relation<
       'oneToMany',

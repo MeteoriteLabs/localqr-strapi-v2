@@ -55,6 +55,12 @@
     },
     "list_description": {
       "type": "text"
+    },
+    "recommendation_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recommendation-list.recommendation-list",
+      "inversedBy": "product_lists"
     }
   }
 }

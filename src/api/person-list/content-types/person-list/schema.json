@@ -55,6 +55,12 @@
       "relation": "oneToMany",
       "target": "api::recommended-person.recommended-person",
       "mappedBy": "person_list"
+    },
+    "recommendation_list": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recommendation-list.recommendation-list",
+      "inversedBy": "person_lists"
     }
   }
 }

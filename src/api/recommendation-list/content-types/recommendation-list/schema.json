@@ -50,6 +50,18 @@
     },
     "display_order": {
       "type": "integer"
+    },
+    "person_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::person-list.person-list",
+      "mappedBy": "recommendation_list"
+    },
+    "product_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-list.product-list",
+      "mappedBy": "recommendation_list"
     }
   }
 }
