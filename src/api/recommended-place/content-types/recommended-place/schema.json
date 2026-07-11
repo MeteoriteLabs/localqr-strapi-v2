@@ -10,6 +10,7 @@
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "Place_Details": {
       "type": "json"
@@ -90,6 +91,12 @@
     },
     "Person_Details": {
       "type": "json"
+    },
+    "user_rating": {
+      "type": "integer"
+    },
+    "google_rating": {
+      "type": "decimal"
     }
   }
 }

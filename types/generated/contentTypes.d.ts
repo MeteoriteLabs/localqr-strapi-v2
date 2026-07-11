@@ -1968,6 +1968,7 @@ export interface ApiRecommendedPlaceRecommendedPlace
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    google_rating: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -2008,6 +2009,7 @@ export interface ApiRecommendedPlaceRecommendedPlace
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    user_rating: Schema.Attribute.Integer;
     user_recommendation_note: Schema.Attribute.RichText;
     Users_Place_Note: Schema.Attribute.Blocks;
     Users_Social_URL: Schema.Attribute.String;

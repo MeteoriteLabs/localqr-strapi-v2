@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-07-06T15:48:41.005Z"
+    "x-generation-date": "2026-07-10T04:34:39.272Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -23658,6 +23658,13 @@
                                     ]
                                   },
                                   "Person_Details": {},
+                                  "user_rating": {
+                                    "type": "integer"
+                                  },
+                                  "google_rating": {
+                                    "type": "number",
+                                    "format": "float"
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -33472,6 +33479,13 @@
                                       ]
                                     },
                                     "Person_Details": {},
+                                    "user_rating": {
+                                      "type": "integer"
+                                    },
+                                    "google_rating": {
+                                      "type": "number",
+                                      "format": "float"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -41434,6 +41448,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -49914,6 +49935,13 @@
                                       ]
                                     },
                                     "Person_Details": {},
+                                    "user_rating": {
+                                      "type": "integer"
+                                    },
+                                    "google_rating": {
+                                      "type": "number",
+                                      "format": "float"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -57674,6 +57702,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -65732,6 +65767,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -73918,6 +73960,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -83582,6 +83631,13 @@
                                       ]
                                     },
                                     "Person_Details": {},
+                                    "user_rating": {
+                                      "type": "integer"
+                                    },
+                                    "google_rating": {
+                                      "type": "number",
+                                      "format": "float"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -91344,6 +91400,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -99427,6 +99490,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -108295,6 +108365,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -116155,6 +116232,13 @@
                                     ]
                                   },
                                   "Person_Details": {},
+                                  "user_rating": {
+                                    "type": "integer"
+                                  },
+                                  "google_rating": {
+                                    "type": "number",
+                                    "format": "float"
+                                  },
                                   "createdAt": {
                                     "type": "string",
                                     "format": "date-time"
@@ -124661,6 +124745,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -133109,6 +133200,13 @@
                                       ]
                                     },
                                     "Person_Details": {},
+                                    "user_rating": {
+                                      "type": "integer"
+                                    },
+                                    "google_rating": {
+                                      "type": "number",
+                                      "format": "float"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -140900,6 +140998,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -149783,6 +149888,13 @@
                                       ]
                                     },
                                     "Person_Details": {},
+                                    "user_rating": {
+                                      "type": "integer"
+                                    },
+                                    "google_rating": {
+                                      "type": "number",
+                                      "format": "float"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -157758,6 +157870,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -167795,6 +167914,13 @@
                             ]
                           },
                           "Person_Details": {},
+                          "user_rating": {
+                            "type": "integer"
+                          },
+                          "google_rating": {
+                            "type": "number",
+                            "format": "float"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -176894,6 +177020,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -185231,6 +185364,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -193561,6 +193701,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -201146,6 +201293,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -210178,6 +210332,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -215103,6 +215264,13 @@
                 ]
               },
               "Person_Details": {},
+              "user_rating": {
+                "type": "integer"
+              },
+              "google_rating": {
+                "type": "number",
+                "format": "float"
+              },
               "locale": {
                 "type": "string"
               },
@@ -222993,6 +223161,13 @@
                       ]
                     },
                     "Person_Details": {},
+                    "user_rating": {
+                      "type": "integer"
+                    },
+                    "google_rating": {
+                      "type": "number",
+                      "format": "float"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -223240,6 +223415,13 @@
             ]
           },
           "Person_Details": {},
+          "user_rating": {
+            "type": "integer"
+          },
+          "google_rating": {
+            "type": "number",
+            "format": "float"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -226594,6 +226776,13 @@
                                 ]
                               },
                               "Person_Details": {},
+                              "user_rating": {
+                                "type": "integer"
+                              },
+                              "google_rating": {
+                                "type": "number",
+                                "format": "float"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -240519,6 +240708,13 @@
                 ]
               },
               "Person_Details": {},
+              "user_rating": {
+                "type": "integer"
+              },
+              "google_rating": {
+                "type": "number",
+                "format": "float"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
