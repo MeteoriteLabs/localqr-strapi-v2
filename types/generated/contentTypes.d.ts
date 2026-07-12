@@ -581,31 +581,31 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_books: Schema.Attribute.Enumeration<['Yes', 'No']> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_games: Schema.Attribute.Enumeration<['Yes', 'No']> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_guides: Schema.Attribute.Enumeration<['Yes', 'No']> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_movie: Schema.Attribute.Enumeration<['Yes', 'No']> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_music: Schema.Attribute.Enumeration<['Yes', 'No']> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_people: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_products: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     public_profile: Schema.Attribute.Enumeration<['Yes', 'No']> &
       Schema.Attribute.DefaultTo<'Yes'>;
     Public_Profile_Address: Schema.Attribute.JSON &
@@ -615,7 +615,7 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
         };
       }>;
     public_recommendations: Schema.Attribute.Enumeration<['Yes', 'No']> &
-      Schema.Attribute.DefaultTo<'Yes'>;
+      Schema.Attribute.DefaultTo<'No'>;
     publishedAt: Schema.Attribute.DateTime;
     recommendation_lists: Schema.Attribute.Relation<
       'oneToMany',

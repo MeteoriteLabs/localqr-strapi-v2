@@ -210,7 +210,7 @@
     },
     "public_recommendations": {
       "type": "enumeration",
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -226,7 +226,7 @@
     },
     "public_music": {
       "type": "enumeration",
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -237,7 +237,7 @@
     },
     "public_guides": {
       "type": "enumeration",
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -251,7 +251,7 @@
     },
     "public_movie": {
       "type": "enumeration",
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -265,7 +265,7 @@
     },
     "public_books": {
       "type": "enumeration",
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -279,7 +279,7 @@
     },
     "public_games": {
       "type": "enumeration",
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -307,7 +307,7 @@
           "localized": true
         }
       },
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -320,7 +320,7 @@
           "localized": true
         }
       },
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
@@ -339,7 +339,7 @@
           "localized": true
         }
       },
-      "default": "Yes",
+      "default": "No",
       "enum": [
         "Yes",
         "No"
