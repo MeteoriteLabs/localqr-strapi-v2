@@ -20,7 +20,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-07-11T04:10:28.966Z"
+    "x-generation-date": "2026-07-14T04:44:51.747Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -21552,6 +21552,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "locale": {
                 "type": "string"
               },
@@ -29254,6 +29257,9 @@
                           "No"
                         ]
                       },
+                      "auto_pinning": {
+                        "type": "boolean"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -30143,6 +30149,9 @@
               "Yes",
               "No"
             ]
+          },
+          "auto_pinning": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -37785,6 +37794,9 @@
                             "Yes",
                             "No"
                           ]
+                        },
+                        "auto_pinning": {
+                          "type": "boolean"
                         },
                         "createdAt": {
                           "type": "string",
@@ -46305,6 +46317,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -54039,6 +54054,9 @@
                             "Yes",
                             "No"
                           ]
+                        },
+                        "auto_pinning": {
+                          "type": "boolean"
                         },
                         "createdAt": {
                           "type": "string",
@@ -62559,6 +62577,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -70623,6 +70644,9 @@
                   "Yes",
                   "No"
                 ]
+              },
+              "auto_pinning": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -78816,6 +78840,9 @@
                   "Yes",
                   "No"
                 ]
+              },
+              "auto_pinning": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -87741,6 +87768,9 @@
                             "No"
                           ]
                         },
+                        "auto_pinning": {
+                          "type": "boolean"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -96257,6 +96287,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -104346,6 +104379,9 @@
                   "Yes",
                   "No"
                 ]
+              },
+              "auto_pinning": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -112603,6 +112639,9 @@
                       "Yes",
                       "No"
                     ]
+                  },
+                  "auto_pinning": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -121088,6 +121127,9 @@
                           "Yes",
                           "No"
                         ]
+                      },
+                      "auto_pinning": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",
@@ -129602,6 +129644,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -137315,6 +137360,9 @@
                             "Yes",
                             "No"
                           ]
+                        },
+                        "auto_pinning": {
+                          "type": "boolean"
                         },
                         "createdAt": {
                           "type": "string",
@@ -145855,6 +145903,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -154178,6 +154229,9 @@
                             "Yes",
                             "No"
                           ]
+                        },
+                        "auto_pinning": {
+                          "type": "boolean"
                         },
                         "createdAt": {
                           "type": "string",
@@ -162726,6 +162780,9 @@
                   "Yes",
                   "No"
                 ]
+              },
+              "auto_pinning": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -172771,6 +172828,9 @@
                   "No"
                 ]
               },
+              "auto_pinning": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -181327,6 +181387,9 @@
                       "No"
                     ]
                   },
+                  "auto_pinning": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -189468,6 +189531,9 @@
                       "Yes",
                       "No"
                     ]
+                  },
+                  "auto_pinning": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -197811,6 +197877,9 @@
                       "No"
                     ]
                   },
+                  "auto_pinning": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -206150,6 +206219,9 @@
                       "No"
                     ]
                   },
+                  "auto_pinning": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -214448,6 +214520,9 @@
                       "No"
                     ]
                   },
+                  "auto_pinning": {
+                    "type": "boolean"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -222666,6 +222741,9 @@
                       "Yes",
                       "No"
                     ]
+                  },
+                  "auto_pinning": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -231066,6 +231144,9 @@
                       "Yes",
                       "No"
                     ]
+                  },
+                  "auto_pinning": {
+                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -240322,6 +240403,9 @@
                           "Yes",
                           "No"
                         ]
+                      },
+                      "auto_pinning": {
+                        "type": "boolean"
                       },
                       "createdAt": {
                         "type": "string",

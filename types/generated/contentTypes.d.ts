@@ -472,6 +472,13 @@ export interface ApiAccountAccount extends Struct.CollectionTypeSchema {
       'plugin::users-permissions.user'
     >;
     app_lists: Schema.Attribute.Relation<'oneToMany', 'api::app-list.app-list'>;
+    auto_pinning: Schema.Attribute.Boolean &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<true>;
     bg_picture: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

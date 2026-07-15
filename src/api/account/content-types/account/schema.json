@@ -344,6 +344,15 @@
         "Yes",
         "No"
       ]
+    },
+    "auto_pinning": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": true
     }
   }
 }
