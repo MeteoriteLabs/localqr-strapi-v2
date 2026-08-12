@@ -7,8 +7,9 @@
     "displayName": "GameList"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "List_Name": {
       "type": "string",
@@ -23,18 +24,18 @@
     },
     "Visibility": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
     "cover_image": {
+      "type": "media",
+      "multiple": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "display_order": {
       "type": "integer"

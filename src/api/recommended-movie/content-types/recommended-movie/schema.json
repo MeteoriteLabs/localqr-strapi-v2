@@ -8,8 +8,9 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "tmdb_id": {
       "type": "string",
@@ -17,12 +18,12 @@
     },
     "media_type": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "Movie",
         "Show",
         "TV"
-      ],
-      "required": true
+      ]
     },
     "title": {
       "type": "string",

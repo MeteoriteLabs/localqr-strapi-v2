@@ -8,8 +8,9 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "List_Name": {
       "type": "string",
@@ -24,8 +25,8 @@
     },
     "visibility": {
       "type": "boolean",
-      "default": false,
-      "required": true
+      "required": true,
+      "default": false
     },
     "cover_image": {
       "type": "media",

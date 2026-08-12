@@ -7,7 +7,7 @@
     "displayName": "People_Category"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

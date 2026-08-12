@@ -736,7 +736,7 @@ export interface ApiBookCategoryBookCategory
     singularName: 'book-category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -770,7 +770,7 @@ export interface ApiBookListBookList extends Struct.CollectionTypeSchema {
     singularName: 'book-list';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
@@ -1004,7 +1004,7 @@ export interface ApiGameListGameList extends Struct.CollectionTypeSchema {
     singularName: 'game-list';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
@@ -1255,7 +1255,7 @@ export interface ApiPeopleCategoryPeopleCategory
     singularName: 'people-category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     Category_name: Schema.Attribute.String;
@@ -1287,7 +1287,7 @@ export interface ApiPersonListPersonList extends Struct.CollectionTypeSchema {
     singularName: 'person-list';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
@@ -1386,7 +1386,7 @@ export interface ApiProductCategoryProductCategory
     singularName: 'product-category';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
@@ -1419,7 +1419,7 @@ export interface ApiProductListProductList extends Struct.CollectionTypeSchema {
     singularName: 'product-list';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     account: Schema.Attribute.Relation<'manyToOne', 'api::account.account'>;
@@ -1656,7 +1656,7 @@ export interface ApiRecommendedAppRecommendedApp
     singularName: 'recommended-app';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     app_category: Schema.Attribute.Relation<
@@ -1708,7 +1708,7 @@ export interface ApiRecommendedBookRecommendedBook
     singularName: 'recommended-book';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     authors: Schema.Attribute.JSON;
@@ -1774,7 +1774,7 @@ export interface ApiRecommendedGameRecommendedGame
     singularName: 'recommended-game';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     cover_url: Schema.Attribute.String;
@@ -1839,7 +1839,7 @@ export interface ApiRecommendedMovieRecommendedMovie
     singularName: 'recommended-movie';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     backdrop_path: Schema.Attribute.String;
@@ -1901,7 +1901,7 @@ export interface ApiRecommendedPersonRecommendedPerson
     singularName: 'recommended-person';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     avatar_path: Schema.Attribute.String;
@@ -2032,7 +2032,7 @@ export interface ApiRecommendedProductRecommendedProduct
     singularName: 'recommended-product';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     brand: Schema.Attribute.String;
@@ -2083,7 +2083,7 @@ export interface ApiSongLimitSongLimit extends Struct.CollectionTypeSchema {
     singularName: 'song-limit';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     ai_guide_requests: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
@@ -2115,7 +2115,7 @@ export interface ApiSubscriptionPlanBaseSubscriptionPlanBase
     singularName: 'subscription-plan-base';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     ai_guide_quota: Schema.Attribute.String;
@@ -2217,7 +2217,7 @@ export interface ApiUserSubscriptionPlanUserSubscriptionPlan
     singularName: 'user-subscription-plan';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
